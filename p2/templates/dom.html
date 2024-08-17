@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(50deg, red, orange, yellow);
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        #one {
+            padding: 5px;
+            border: 2px solid rgb(146, 129, 129);
+            background-color: aqua;
+        }
+
+        #two {
+            padding: 5px;
+            border: 2px solid rgb(13, 11, 138);
+            background-color: aqua;
+            position: relative;
+            margin-left: 500px;
+        }
+
+        #three {
+            padding: 5px;
+            border: 2px solid rgb(13, 11, 138);
+            background-color: aqua;
+            position: relative;
+            margin-left: 580px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="fst">HELLO</h1>
+    <button id="one" onclick="one();">FIRST ONE</button>
+    <button id="two" onclick="two();">SECOND</button>
+    <button id="three" onclick="three();">THREE</button>
+
+    <script>
+        let output = document.querySelector('#fst')
+        function one() {
+            output.textContent = "HI THERE"
+            output.style.color = "red"
+          
+
+        }
+        function two() {
+            output.textContent = "GOOD TO SEE YOU"
+            output.style.color = "Brown"
+
+        }
+        function three(){
+            output.textContent = "SEE YOU ON THE OTHER SIDE"
+            output.style.color="yellow"
+
+        }
+
+
+    </script>
+</body>
+
+</html>
