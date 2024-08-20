@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: limegreen;
+            border-radius: 50%;
+            animation-name: travel;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            position: relative;
+        }
+        @keyframes travel{
+            0%,100%{
+                top:0px;
+                left:0px;
+            }
+            25%
+            {
+                top:0px;
+                left:200px;
+    
+            }
+            50%
+            {
+                top:200px;
+                left:200px;
+            }
+            75%{
+                top:200px;
+                left:0px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+
+    </div>
+</body>
+</html>
