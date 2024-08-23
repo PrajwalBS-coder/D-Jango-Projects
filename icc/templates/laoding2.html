@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Loading</title>
+    <style>
+        body {
+            background-color: black;
+
+        }
+
+        .container {
+
+            text-align: center;
+            margin-top: 200px;
+
+        }
+
+        .child {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-left: 40px;
+            animation: load 3s 0s infinite alternate;
+        }
+
+        @keyframes load {
+            0% {
+                transform: translateY(-200px);
+
+            }
+
+            100% {
+                transform: translateY(100px);
+
+            }
+
+        }
+
+        .one {
+            background-color: red;
+            animation-delay: 1s;
+        }
+
+        .two {
+            background-color: rgb(0, 255, 136);
+            animation-delay: 2s;
+        }
+
+        .three {
+            background-color: rgb(166, 255, 0);
+            animation-delay: 3s;
+        }
+
+        .four {
+            background-color: rgb(0, 68, 255);
+            animation-delay: 4s;
+        }
+
+        .five {
+            background-color: rgb(195, 0, 255);
+            animation-delay: 5s;
+        }
+
+        .six {
+            background-color: rgb(255, 94, 0);
+            animation-delay: 6s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child one"></div>
+        <div class="child two"></div>
+        <div class="child three"></div>
+        <div class="child four"></div>
+        <div class="child five"></div>
+        <div class="child six"></div>
+    </div>
+</body>
+
+</html>
