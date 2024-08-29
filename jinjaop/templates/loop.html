@@ -6,6 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <center>
+        <h1>Loop</h1>
+        <a href="{% url 'cond' %}">Go to Condition</a>
+        {% for i in name %}
+        <h1>{{ i }}</h1>     
+
+        {% endfor %}
+    </center>
 </body>
 </html>
