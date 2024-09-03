@@ -1,0 +1,500 @@
+    3  git push jspider main
+    4  git status
+    5  git add .
+    6  git commit -m "434"
+    7  git push jspider main
+    8  git status
+    9  git status
+   10  git add .
+   11  git commit -m "448"
+   12  git push jspider main
+   13  exit
+   14  git status
+   15  git add .
+   16  git commit -m "459"
+   17  git push jspider main
+   18  exit
+   19  git status
+   20  git add .
+   21  git commit -m "2678"
+   22  git push jspider main
+   23  git status
+   24  git add .
+   25  git commit -m "476"
+   26  git push jspider main
+   27  exit
+   28  git status
+   29  git add .
+   30  git commit -m "476 updated"
+   31  git push jspider main
+   32  git status
+   33  git add .
+   34  git commit -m "476 updated"
+   35  git push jspider main
+   36  git status
+   37  git add .
+   38  git commit -m "500"
+   39  git push jspider main
+   40  exit
+   41  git status
+   42  git add .
+   43  git commit -m "29"
+   44  git push jspider main
+   45  git status
+   46  git add .
+   47  git commit -m "1460"
+   48  git push jspider main
+   49  exit
+   50  git status
+   51  git add .
+   52  git commit -m "166"
+   53  git push jspider main
+   54  git status
+   55  git add .
+   56  git commit -m "167"
+   57  git push jspider main
+   58  git status
+   59  git add .
+   60  git commit -m "204"
+   61  git push jspider main
+   62  git status
+   63  git add .
+   64  git commit -m "3083---3084"
+   65  git push jspider main
+   66  git status
+   67  git add .
+   68  git commit -m "507"
+   69  git push jspider main
+   70  exit
+   71  git status
+   72  git add .
+   73  git commit -m "1408"
+   74  git push jspider main
+   75  exit
+   76  git status
+   77  git add .
+   78  git commit -m "1408 new code"
+   79  git push jspider main
+   80  git status
+   81  git add .
+   82  git commit -m "43"
+   83  git push jspider main
+   84  git status
+   85  git commit -m "151 164 39"
+   86  git add .
+   87  git commit -m "151 164 39"
+   88  git push jspider main
+   89  git status
+   90  git add .
+   91  git commit -m "162"
+   92  git push jspider main
+   93  git status
+   94  git add .
+   95  git commit -m "162 updated"
+   96  git push jspider main
+   97  git status
+   98  git status
+   99  exit
+  100  git satus
+  101  git status
+  102  git status
+  103  git status
+  104  git add .
+  105  git commit -m "17"
+  106  git push jspider main
+  107  git satus
+  108  git status
+  109  git add .
+  110  git commit -m "137,840"
+  111  hit push jspider main
+  112  git push jspider main
+  113  git push --help
+  114  git push -u jspider main
+  115  git push -u jspider main
+  116  git push --help
+  117  git pull python/Numpy
+  118  git pull https://github.com/PrajwalBS-coder/Jspiders/tree/44404955b3f5a199a11495226ec7aa2d8bb505d6/python/Numpy
+  119  git pull https://github.com/PrajwalBS-coder/Jspiders.git
+  120  git push -u jspider main
+  121  git status
+  122  exit
+  123  git status
+  124  git add .
+  125  git status
+  126  git commit -m "17"
+  127  git push jspider main
+  128  exit
+  129  git status
+  130  git add .
+  131  git commit -m "198"
+  132  git push jspider main
+  133  git status
+  134  git status
+  135  git add .
+  136  git commit -m"187"
+  137  git push jspider main
+  138  git status
+  139  git status
+  140  git add .
+  141  git commit -m "189//only 34 out of 38 test cases"
+  142  git push jspider main
+  143  exit
+  144  git status
+  145  git add .
+  146  git commit -m "40"
+  147  git push jspider main
+  148  exit
+  149  git STATUS
+  150  git status
+  151  git add .
+  152  git commit -m "modified listgroup.tsx"
+  153  git remote -v
+  154  git push react master
+  155  git status
+  156  exit
+  157  git status
+  158  git add .
+  159  git commit -m "onclick function added"
+  160  git push react master
+  161  exit
+  162  git satus
+  163  git status
+  164  git status
+  165  git status
+  166  git status
+  167  git status
+  168  git push jspider main
+  169  git status
+  170  git status
+  171  git add "Jango"
+  172  git status
+  173  git status
+  174  git add .
+  175  git commit -m "49"
+  176  git push jspider main
+  177  git status
+  178  git add .
+  179  git commit -m "49 updated"
+  180  git push jspider main
+  181  exit
+  182  git status
+  183  git status
+  184  git status
+  185  git add .
+  186  git commit -m " Jango"
+  187  git status
+  188  git init
+  189  git add .
+  190  git commit -m "Jango Project"
+  191  git branch -M main
+  192  git commit -m "Jango Project"
+  193  git init
+  194  git add .
+  195  git commit -m "Jango Project"
+  196  rm -r .git
+  197  rm -r .git
+  198  git status
+  199  git status
+  200  git init
+  201  git add .
+  202  git commit -m "DJango Projects"
+  203  git remote add dj https://github.com/PrajwalBS-coder/D-Jango-Projects.git
+  204  git branch -m main
+  205  git push dj main
+  206  git status
+  207  git add .
+  208  git commit -m "App Added"
+  209  git push dj main
+  210  git status
+  211  git add .
+  212  git commit -m "A Function Greeting Based On Time is created "
+  213  git push dj main
+  214  exit
+  215  activate
+  216  git status
+  217  cd p1
+  218  git status
+  219  git add .
+  220  git commit -m "49"
+  221  git push jspider main
+  222  exit
+  223  git status
+  224  git add .
+  225  git commit -m "edited"
+  226  git push react master
+  227  git status
+  228  git add .
+  229  git commit -m "removed props and added {name,heading }:Props(Properties)"
+  230  git push react mster
+  231  git push react master
+  232  exit
+  233  git status
+  234  git add .
+  235  git commit -m "project 2 and 5 views"
+  236  git push dj main
+  237  exit
+  238  git status
+  239  git add .
+  240  git commit -m "promise "
+  241  git push jspider main
+  242  git status
+  243  git add .
+  244  git commit -m "function added to props"
+  245  git push react master
+  246  exit
+  247  git status
+  248  git add .
+  249  git commit -m "Project P3 Based on Second method to create Templates_Dir using BASE_DIR/'tempaltes'"
+  250  git push dj main
+  251  git status
+  252  git add .
+  253  git commmit -m "Project P4 Templates_Dir creating using 'os.path.join()' metod"
+  254  git commit -m "Project P4 Templates_Dir creating using 'os.path.join()' metod"
+  255  git push dj main
+  256  exit
+  257  git statsu
+  258  git status
+  259  git status
+  260  exit
+  261  git status
+  262  git add .
+  263  git commit -m "generic url-mapping"
+  264  git push dj main
+  265  exit
+  266  git status
+  267  git add .
+  268  git commit -m "I have tried 3Sum Closest "
+  269  git push jspider main
+  270  git status
+  271  git add .
+  272  git commit -m "31 but not running in leetcode"
+  273  git push jspider main
+  274  exit
+  275  git status
+  276  git add .
+  277  git commit -m "alert.tsx added "
+  278  git push react master
+  279  exit
+  280  git status
+  281  git add .
+  282  git commit -m "ipl2 based on specific url mapping using HttpResponse"
+  283  git push dj main
+  284  exit
+  285  git status
+  286  git add .
+  287  git commit -m"33 lats3consananat princthar_n_ways"
+  288  git push jspider main
+  289  exit
+  290  git status
+  291  git add .
+  292  git commit -m "34"
+  293  git push jspider main
+  294  exit
+  295  git status
+  296  git add .
+  297  git commit -m "47"
+  298  git push jspider main
+  299  git status
+  300  git add .
+  301  git commit -m "53"
+  302  git push jspider main
+  303  exit
+  304  git status
+  305  git add .
+  306  git commit -m "46"
+  307  git push jspider main
+  308  exit
+  309  git status
+  310  git add .
+  311  git commit -m "Button Component Added"
+  312  git push react master
+  313  exit
+  314  git status
+  315  git push react master
+  316  git status
+  317  git push react master
+  318  git status
+  319  git add .
+  320  git commit -m "Button Component Added"
+  321  git push react master
+  322  exit
+  323  git status
+  324  git add .
+  325  git commit -m "Added ICC Project Based On Template Using Specific Url Maping"
+  326  git push dj main
+  327  exit
+  328  git status
+  329  git status
+  330  git add .
+  331  git commit -m "564"
+  332  git push jspider main
+  333  git status
+  334  git add .
+  335  git commit -m "564 edited"
+  336  git push jspider main
+  337  exit
+  338  git status
+  339  exit
+  340  git status
+  341  exit
+  342  git status
+  343  git status
+  344  git add .
+  345  git commit -m "practice"
+  346  git push jspider main
+  347  exit
+  348  git status
+  349  git add .
+  350  git commit -m "jinja"
+  351  git push jspider main
+  352  git push dj main
+  353  exit
+  354  git status
+  355  git add .
+  356  git commit -m "32"
+  357  git push jspider main
+  358  git remote
+  359  exit
+  360  git status
+  361  git init
+  362  git status
+  363  git add .
+  364  git commit -m "Trining folder"
+  365  git branch -M main
+  366  git remote add origin https://github.com/PrajwalBS-coder/Training.git
+  367  git push -u origin main
+  368  exit
+  369  git log
+  370  git checkout cdfdd59895a490b36233b540b57d0a83eebb28b4
+  371  rm -f .git/objects/1e/ec1ec2b47e057763d121f198c69ffbdde2e915
+  372  git fetch --all
+  373  git checkout cdfdd59895a490b36233b540b57d0a83eebb28b4
+  374  git reset --hard commit cdfdd59895a490b36233b540b57d0a83eebb28b4
+  375  git reset --hard cdfdd59895a490b36233b540b57d0a83eebb28b4
+  376  git clone https://github.com/PrajwalBS-coder/D-Jango-Projects.git
+  377  git log --oneline
+  378  git revert cdfdd59
+  379  git pull
+  380  git revert cdfdd59
+  381  git stash
+  382  git stash pop
+  383  git revert cdfdd59
+  384  git status
+  385  git commit -m ""
+  386  git commit -m "ppp"
+  387  git push dj main
+  388  git revert cdfdd59
+  389  rm -f 1fda8c56b43e35d2d5194605e8142b9d8312084d
+  390  git revert cdfdd59
+  391  git stash
+  392  git revert cdfdd59
+  393  git pull dj main
+  394  git fsck
+  395  git restore
+  396  git restore cdfdd59
+  397  git reset head
+  398  git revert cdfdd59
+  399  git clean -n -d
+  400  git revert cdfdd59
+  401  git clean -f
+  402  git revert cdfdd59
+  403  git clean -i
+  404  git revert cdfdd59
+  405  git clean -fdx
+  406  git revert cdfdd59
+  407  git log
+  408  git reset cdfdd59895a490b36233b540b57d0a83eebb28b4
+  409  rm -f .git/objects/1e/ec1ec2b47e057763d121f198c69ffbdde2e915
+  410  git fsck --full
+  411  chkdsk
+  412  git reset
+  413  git reset cdfdd59895a490b36233b540b57d0a83eebb28b4
+  414  git cat-file -p 1eec1ec2b47e057763d121f198c69ffbdde2e915
+  415  git write-tree
+  416  git cat-file -p 4b825dc642cb6eb9a060e54bf8d69288fbee4904
+  417  git reset cdfdd59895a490b36233b540b57d0a83eebb28b4
+  418  git show -s --format=%T HEAD
+  419  git status
+  420  git log
+  421  gigit reset --hard cdfdd59895a490b36233b540b57d0a83eebb28b4
+  422  git reset --hard cdfdd59895a490b36233b540b57d0a83eebb28b4
+  423  git status
+  424  git status
+  425  git status
+  426  git add .
+  427  git commit -m "jinja edtied"
+  428  git push dj main
+  429  git pull
+  430  git pull dj main
+  431  git push dj main
+  432  git pull dj main
+  433  git status
+  434  git add .
+  435  git commit -m 
+  436  git commit -m "done"
+  437  git push dj main
+  438  git status
+  439  git reset --hard cdfdd59895a490b36233b540b57d0a83eebb28b4
+  440  git status
+  441  git add .
+  442  girt commit -m "operation on jinja"
+  443  git commit -m "operation on jinja"
+  444  git push dj main
+  445  git status
+  446  git push dj main
+  447  git push -f dj main
+  448  git status
+  449  git status
+  450  git status
+  451  git add .
+  452  git commit -m "conditional operations"
+  453  git push dj main
+  454  git status
+  455  git add .
+  456  git commit -m "Url Navigation Done"
+  457  git push dj main
+  458  git status
+  459  git add .
+  460  git commit -m "booking project created using specific urlmapping done through url navigation"
+  461  git push dj main
+  462  exit
+  463  git status
+  464  git add .
+  465  git commit -m "Practise"
+  466  git push jspider main
+  467  exit
+  468  git status
+  469  git add .
+  470  git commit -m "Specific to genereic visa versa using app_name"
+  471  git push dj main
+  472  exit
+  473  git status
+  474  git status
+  475  git add.
+  476  git add .
+  477  git commit -m "modified"
+  478  git pusf jspider main
+  479  git push jspider main
+  480  exit
+  481  git status
+  482  git add .
+  483  git commit -m "1894"
+  484  git status
+  485  git reset
+  486  find .git/objects/ -size 0 -exec rm -f {} \;
+  487  git status
+  488  git status
+  489  git log
+  490  git status
+  491  git fsck
+  492  git fsck --name-objects
+  493  git stash
+  494  git fsck --full
+  495  git status
+  496  git status
+  497  git add .
+  498  git commit -m "tried static file but not working good"
+  499  git push dj main
+  500  exit
+  501  cat cmds.txt>histroy
+  502  history > gitcommnds.txt

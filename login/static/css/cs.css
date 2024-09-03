@@ -1,0 +1,20 @@
+h1{
+    background-color:red
+}
+#logan{
+    width: 200px;
+    height: 200px;
+}
+.cls{
+    background:linear-gradient(45deg,rgb(240, 197, 58),rgb(240, 129, 25),rgb(243, 86, 86));;
+}
+h1::selection{
+    color:blueviolet;
+}
+ #logan:hover{
+    width: 300px;
+    height: 300px;
+ }
+ div >p{
+    color: aquamarine;
+ }
