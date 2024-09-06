@@ -6,6 +6,6 @@ body{
     background:linear-gradient(45deg,rgb(240, 197, 58),rgb(240, 129, 25),rgb(192, 29, 29));;
 }
 #img:hover{
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
  }
