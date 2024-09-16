@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="{% static 'css/mdb.dark.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/mdb.dark.rtl.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/mdb.rtl.min.css' %}" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <button type="button" class="btn btn-success" data-mdb-ripple-init>Success</button>
+    <button type="button" class="btn btn-danger" data-mdb-ripple-init>Danger</button>
+    <button type="button" class="btn btn-warning" data-mdb-ripple-init>Warning</button>
+    <button type="button" class="btn btn-info" data-mdb-ripple-init>Info</button>
+    
+    
+    
+    
+    <!-- MDB  Download-->
+    <script type="text/javascript" src="{% static 'js/mdb.es.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/mdb.umd.min.js' %}"></script>
+
+</body>
+
+</html>
