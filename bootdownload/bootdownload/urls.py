@@ -21,5 +21,10 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('down/',down,name='down'),
-    path('online/',online,name='online')
+    path('online/',online,name='online'),
+    path('dummy/',dummy,name='dummy'),
+    path('car/',car,name='car'),
+    path('card/',card,name='card'),
+    path('alert/',alert,name='alert'),
+    path('badge/',badge,name='badge')
 ]

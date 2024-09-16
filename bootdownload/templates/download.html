@@ -1,3 +1,4 @@
+{% extends 'dummy.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -26,44 +27,15 @@
 
 
 <body>
+
+    {% block empty %}
+
+
     <h1 class="btn btn-success ">
         CLICK
     </h1>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-    </div>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFccy2JR2DMsjMbqQclkz5qR47P2pA0Kiv5g&s"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://imgs.search.brave.com/PRMphLUd5pcBkoGP51xLYugFOqKOt3Z0e09jypsW9sM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9z/cG9ydHMtY2FyLWRy/aXZpbmctYXNwaGFs/dC1yb2FkLW5pZ2h0/LWdlbmVyYXRpdmUt/YWlfMTg4NTQ0LTgw/NTIuanBnP3NpemU9/NjI2JmV4dD1qcGc"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://imgs.search.brave.com/fCZGVLOL87AhsfGohZ3JJTK35ycMeNZYvBF1MSWRWk8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzYw/N2YyMTRlMjgzMTUy/NzY5YzRmOThlMS8x/NjE5NDM2NzU0ODM2/LTNIVzlGSVhVQzBH/SktQMENRRjNBL1Bp/Y3R1cmUrY2FyK3Jl/bnRhbCt0cnVja3Mr/cGhvdG9zaG9vdHMu/anBn"
-                    class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
+    {% endblock %}
 
     <!-- script linking -->
     <!-- <script src="{% static 'js/jq.js' %}"></script>
