@@ -1,0 +1,250 @@
+ind_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _f
+ind_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _lo
+ad_unlocked
+  File "<frozen importlib._bootstrap_external>", line 99
+5, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _ca
+ll_with_frames_removed
+  File "D:\DJango\dj\Scripts\goodemp\goodemp\settings.py", line 14, in <module>   
+    imio
+NameError: name 'imio' is not defined
+PS D:\DJango\dj\Scripts\goodemp> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 22, 2024 - 22:23:12
+Django version 5.1.1, using settings 'goodemp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+Not Found: /op
+[22/Sep/2024 22:23:17] "GET /op HTTP/1.1" 404 2343
+[22/Sep/2024 22:24:06] "GET /result HTTP/1.1" 301 0
+[22/Sep/2024 22:24:06] "GET /result/ HTTP/1.1" 200 2687
+D:\DJango\dj\Scripts\goodemp\app\models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1
+    self.run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1
+    self._target(*self._args, **self._kwargs)
+  File "D:\DJango\dj2\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "D:\DJango\dj2\Lib\site-packages\django\core\management\commands\runserver.py", l
+    autoreload.raise_last_exception()
+  File "D:\DJango\dj2\Lib\site-packages\django\utils\autoreload.py", line 87, in raise_l
+    raise _exception[1]
+  File "D:\DJango\dj2\Lib\site-packages\django\core\management\__init__.py", line 394, i
+    autoreload.check_errors(django.setup)()
+  File "D:\DJango\dj2\Lib\site-packages\django\utils\autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "D:\DJango\dj2\Lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "D:\DJango\dj2\Lib\site-packages\django\apps\registry.py", line 116, in populate
+    app_config.import_models()
+  File "D:\DJango\dj2\Lib\site-packages\django\apps\config.py", line 269, in import_mode
+    self.models_module = import_module(models_module_name)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "D:\DJango\dj\Scripts\goodemp\app\models.py", line 15
+                              ^^^^^^^^^^^^^
+SyntaxError: expected argument value expression
+PS D:\DJango\dj\Scripts\goodemp> python manage.py migrate
+  Apply all migrations: admin, app, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+  Your models in app(s): 'app' have changes that are not yet reflected in a migration, a
+PS D:\DJango\dj\Scripts\goodemp> python manage.py makemigrations
+Migrations for 'app':
+  app\migrations\0003_alter_emp_hiredate.py
+    ~ Alter field hiredate on emp
+PS D:\DJango\dj\Scripts\goodemp> python manage.py migrate       
+Operations to perform:
+  Apply all migrations: admin, app, auth, contenttypes, sessions
+Running migrations:
+  Applying app.0003_alter_emp_hiredate... OK
+PS D:\DJango\dj\Scripts\goodemp> python manage.py runserver     
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 22, 2024 - 22:29:49
+Django version 5.1.1, using settings 'goodemp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[22/Sep/2024 22:29:53] "GET /admin/ HTTP/1.1" 200 9897
+[22/Sep/2024 22:29:56] "GET /admin/app/emp/ HTTP/1.1" 200 9878
+[22/Sep/2024 22:29:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:30:00] "GET /admin/app/emp/3/change/ HTTP/1.1" 200 15269
+[22/Sep/2024 22:30:00] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:30:03] "POST /admin/app/emp/3/change/ HTTP/1.1" 302 0
+[22/Sep/2024 22:30:03] "GET /admin/app/emp/ HTTP/1.1" 200 10068
+[22/Sep/2024 22:30:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:30:03] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[22/Sep/2024 22:30:05] "GET /admin/app/emp/add/ HTTP/1.1" 200 15000
+[22/Sep/2024 22:30:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:30:10] "GET /admin/app/emp/ HTTP/1.1" 200 9878
+[22/Sep/2024 22:30:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:30:26] "GET /admin/app/emp/3/change/ HTTP/1.1" 200 15269
+[22/Sep/2024 22:30:26] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:31:02] "POST /admin/app/emp/add/ HTTP/1.1" 302 0
+[22/Sep/2024 22:31:02] "GET /admin/app/emp/ HTTP/1.1" 200 10322
+[22/Sep/2024 22:31:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+[22/Sep/2024 22:31:07] "GET /result/ HTTP/1.1" 200 3119
+PS D:\DJango\dj\Scripts\goodemp> 
+ *  History restored 
+
+Python 3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)] 
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from app .models import *
+>>> D=Dept.objects.all()
+>>> print(D)
+<QuerySet [<Dept: Research>, <Dept: Sales>, <Dept: Accounting>]>
+>>> print(D[1]) 
+Sales
+>>> print(D[0]) 
+>>> print(D[2])
+Accounting
+>>> print(D[3])
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\query.py", line 452, in __getitem__                                                                              tit
+    return qs._result_cache[0]
+           ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+>>> Friday=Emp(eno=5,ename='Friday',job='AI Voice Asst',hiredate='2024-09-24',sal=25000,dno=D[2],mgr=None,comm=None)
+>>> Friday.save()
+>>> print(D[2]) 
+Accounting
+>>> print(D[3]) 
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "<console>", line 1, in <module>                                                t
+  File "<console>", line 1, in <module>
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\query.py", line 452, in __getitem__
+    return qs._result_cache[0]
+           ~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+>>> print(D[1])
+Sales
+>>> print(D[0])
+Research
+>>> Rose=Emp(eno=6,ename='Rose',job='Asst',hiredate='2024-01-24',sal=250000,dno=D[1],mgr=None,comm=150000)
+>>> Rose.save()
+>>> Chris=Emp(eno=6,ename='Chris',job='MD',hiredate='2024-08-24',sal=None,dno=self,mgr=None,comm=None)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'self' is not defined
+>>> Chris=Emp(eno=6,ename='Chris',job='MD',hiredate='2024-08-24',sal=None,dno=D[0],mgr=self,comm=None)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'self' is not defined
+>>> Chris=Emp(eno=6,ename='Chris',job='MD',hiredate='2024-08-24',sal=None,dno=D[0],mgr='self',comm=None)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\base.py", line 543, in __init__    _setattr(self, field.name, rel_obj)
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\fields\related_descriptors.py", line 287, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'self'": "Emp.mgr" must be a "Emp" instance.
+>>> Chris=Emp(eno=6,ename='Chris',job='MD',hiredate='2024-08-24',sal=None,dno=D[0],mgr=None,comm=None)
+>>> Chris.save()
+Traceback (most recent call last):
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: app_emp.sal
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\base.py", line 891, in save    
+    self.save_base(
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\base.py", line 1129, in _save_table
+    updated = self._do_update(
+              ^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\base.py", line 1194, in _do_update
+    return filtered._update(values) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\sql\compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\utils.py", line 91, in __exit__       
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DJango\dj2\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: app_emp.sal
+>>> Chris=Emp(eno=6,ename='Chris',job='MD',hiredate='2024-08-24',sal=8900000,dno=D[0],mgr=None,comm=None)
+>>> Chris.save()
+>>> OP=Dept(deptno=4,dname='Operations',loc='Buston')
+>>> OP.save()
+>>> Tom=Emp(eno=6,ename='Tom Hardy',job='System Op',hiredate='2002-12-04',sal=9874560,dno=OP,mgr=Chris,comm=5874)
+>>> Tom.save()
+>>>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
