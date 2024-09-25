@@ -20,5 +20,8 @@ from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('op',op,name='op')
+    path('op',op,name='op'),
+    path('insert/',insert,name='insert'),
+    path('cap/',cap,name='cap'),
+    path('cap2/',cap2,name='cap2')
 ]
