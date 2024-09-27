@@ -60,11 +60,27 @@ def op(re):
 #     d=dept.objects.all()
 #     print(d)
 #     dno=input('')
-def insert(re):
+def insert_topic(re):
+    tn=input()
+    TO=topic.objects.get_or_create(topic_name=tn)
+    if(TO[1]):
+        return render(re,'op2.html',{'topics':topic.objects.all()})
+    else:
+        return hr("It's There Bro")
+
+def insert_webpage(re):
     tn=input()
     name=input()
     u=input()
     em=input()
-    TO=topic.objects.get(topic_name=tn)
-    WO=webpage.objects.get_or_create(topic_name=TO,name=name,url=u,email=em)
-    return hr('Created')
+    TO=topic.objects.filter(topic_name=tn)
+    if TO:
+        WO=webpage.objects.get_or_create(topic_name=TO[0],name=name,url=u,email=em)
+        if WO:
+
+            return render(re,'webpage.html',{'webpage':webpage.objects.all()})
+        else:
+            return hr('Webgage NOt Created')
+    else:
+        return hr("TOPIC NAHI HAI BHAI")
+

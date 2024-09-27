@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+        border: 1px rgb(167, 30, 30) solid;
+        background-color:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <!-- <h1>OP</h1> -->
+
+        <!-- {% for empd in empdet %}
+        <h1>{{empd.ename}}</h1>
+        {% endfor %} -->
+        {% if empdet %}
+        <h1>Show Data</h1>
+
+        <table>
+            <tr>
+                <th>Id</th> <br>
+                <th>Topic_Name</th>
+                <th>Name</th>
+                <th>URL</th>
+                <th>Email</th>
+                <!-- <th>Email</th>
+                <th>Password</th> -->
+            </tr>
+            <tr>
+                {% for wo in webpage %}
+                <td>{{wo.id}}</td>
+                <td>{{wo.topic_name}}</td>
+                <td>{{wo.name}}</td>
+                <td>{{wo.url}}</td>
+                <td>{{wo.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h1>No Data</h1>
+        {% endif %}
+
+
+    </center>
+</body>
+
+</html>
