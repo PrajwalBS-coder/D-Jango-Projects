@@ -84,3 +84,22 @@ def insert_webpage(re):
     else:
         return hr("TOPIC NAHI HAI BHAI")
 
+
+# ONE TEMPLATE FOR ALL THE WEB PAGE
+
+def topi(re):
+    columns=[field.name for field in webpage._meta.get_fields()]
+    columns=columns[1::]
+    # data=topic.objects.all()
+    # data=webpage.objects.values()
+
+    # # Create a list of rows, where each row is a dictionary mapping column names to their values
+    # data_rows = []
+    # for obj in data:
+    #     row = {}
+    #     for column in columns:
+    #         row[column] = getattr(obj, column)  # Dynamically get the value of each field
+    #     data_rows.append(row)
+    data = webpage.objects.all()
+    return render(re,'all.html',{'columns':columns,'data':data})
+
