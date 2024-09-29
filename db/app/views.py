@@ -88,8 +88,8 @@ def insert_webpage(re):
 # ONE TEMPLATE FOR ALL THE WEB PAGE
 
 def topi(re):
-    columns=[field.name for field in webpage._meta.get_fields()]
-    columns=columns[1::]
+    columns=[field.name for field in capital._meta.get_fields()]
+    # columns=columns[1::]
     # data=topic.objects.all()
     # data=webpage.objects.values()
 
@@ -100,6 +100,6 @@ def topi(re):
     #     for column in columns:
     #         row[column] = getattr(obj, column)  # Dynamically get the value of each field
     #     data_rows.append(row)
-    data = webpage.objects.all()
+    data = capital.objects.values()
     return render(re,'all.html',{'columns':columns,'data':data})
 
