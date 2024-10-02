@@ -100,6 +100,6 @@ def topi(re):
     #     for column in columns:
     #         row[column] = getattr(obj, column)  # Dynamically get the value of each field
     #     data_rows.append(row)
-    data = capital.objects.values()
+    data = capital.objects.values().order_by("country_name")
     return render(re,'all.html',{'columns':columns,'data':data})
 
