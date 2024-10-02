@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from app.models import *
 from django.http import HttpResponse as hr
+from django.db.models.functions import Length
 # Create your views here.
 
 def op(re):
@@ -88,8 +89,9 @@ def insert_webpage(re):
 # ONE TEMPLATE FOR ALL THE WEB PAGE
 
 def topi(re):
-    columns=[field.name for field in capital._meta.get_fields()]
-    # columns=columns[1::]
+    # columns=[field.name for field in topic._meta.get_fields()]
+    columns=[field.name for field in access._meta.get_fields()]
+    # columns=columns[1::]#it;ll be usefull in topic model only
     # data=topic.objects.all()
     # data=webpage.objects.values()
 
@@ -100,6 +102,24 @@ def topi(re):
     #     for column in columns:
     #         row[column] = getattr(obj, column)  # Dynamically get the value of each field
     #     data_rows.append(row)
-    data = capital.objects.values().order_by("country_name")
+    # data = capital.objects.values().order_by("capital_name")
+    # data = access.objects.filter(date__range=["1999-01-01", "2024-01-31"]).order_by('date')#range working fine
+    # data = emp.objects.filter(eno__lt=100).order_by('ename')#lt working fine
+    # data = emp.objects.filter(eno__gt=100).order_by('ename')
+    # data = emp.objects.filter(eno__lte=102).order_by('ename')
+    # data = emp.objects.filter(eno__gte=90).order_by('ename')
+    # data = access.objects.filter(date__month='04')
+    # data = access.objects.filter(date__year='2002')
+    # data = access.objects.filter(date__day="19")#it'll print day of the month
+    # data = topic.objects.filter(topic_name__in=('Songs','Mini Series'))
+    # data = topic.objects.filter(topic_name__contains='e')
+    # data = topic.objects.filter(topic_name__regex=r'S')
+    # data = topic.objects.filter(topic_name__contains='e').order_by(Length('topic_name'))
+    # data = topic.objects.filter(topic_name__contains='e').order_by(Length('topic_name').desc())
+    # data = topic.objects.exclude(topic_name__contains='e')
+    # data = access.objects.filter(date__week=15)#we've to add week of the year from 1-52or 53
+    # data = access.objects.filter(date__week_day=2)#week starts from sunday(1) to saturday(7)
+    data = access.objects.filter(date__week=15)    
+
     return render(re,'all.html',{'columns':columns,'data':data})
 
