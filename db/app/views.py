@@ -2,6 +2,7 @@ from django.shortcuts import render
 from app.models import *
 from django.http import HttpResponse as hr
 from django.db.models.functions import Length
+from django.db.models import Q
 # Create your views here.
 
 def op(re):
@@ -119,7 +120,12 @@ def topi(re):
     # data = topic.objects.exclude(topic_name__contains='e')
     # data = access.objects.filter(date__week=15)#we've to add week of the year from 1-52or 53
     # data = access.objects.filter(date__week_day=2)#week starts from sunday(1) to saturday(7)
-    data = access.objects.filter(date__week=15)    
+    
+    # data = access.objects.filter(date__week=15) or (author__contains='e')#here it'll return error cause both of the condtions return queryset so it is difficult to concatinate those
+    # data = access.objects.filter(Q(date__week=25) & Q(author__contains='A'))
+    # data = access.objects.filter(date__week=15,author__contains='e')#work for and condition it's shortcut for baove condition
+    data = access.objects.filter(Q(date__week=25) | Q(author__regex='A'))#we can use Qonly dealing with orWe cxan't use shortcut 
+
 
     return render(re,'all.html',{'columns':columns,'data':data})
 
