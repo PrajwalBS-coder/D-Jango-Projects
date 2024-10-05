@@ -91,8 +91,8 @@ def insert_webpage(re):
 
 def topi(re):
     # columns=[field.name for field in topic._meta.get_fields()]
-    columns1=[field.name for field in access._meta.get_fields()]
-    columns2=[field.name for field in webpage._meta.get_fields()][1::]
+    columns1=[field.name for field in emp._meta.get_fields()]
+    columns2=[field.name for field in dept._meta.get_fields()][1::]
     columns=columns1+columns2
     # columns=columns[1::]#it;ll be usefull in topic model only ,webpage._meta.get_fields()
     # data=topic.objects.all()
@@ -127,7 +127,9 @@ def topi(re):
     # data = access.objects.filter(Q(date__week=25) & Q(author__contains='A'))
     # data = access.objects.filter(date__week=15,author__contains='e')#work for and condition it's shortcut for baove condition
     # data = access.objects.filter(Q(date__week=25) | Q(author__regex='A'))#we can use Qonly dealing with orWe cxan't use shortcut 
-    data=webpage.objects.prefetch_related('name').all()
+    # data=webpage.objects.prefetch_related('access_set').all()
+    data=dept.objects.prefetch_related('emp_set').all()
+
 
 
 

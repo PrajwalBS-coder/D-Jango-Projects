@@ -37,7 +37,7 @@ class dept(models.Model):
     loc=models.CharField(max_length=100)
     email=models.EmailField()
     def __str__(self):
-        return self.dna
+        return str(self.dno)
 class emp(models.Model):
     eno=models.IntegerField()
     dno=models.ForeignKey(dept,on_delete=models.CASCADE,default=1)

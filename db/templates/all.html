@@ -28,16 +28,53 @@
                 {% for row in data %}
                 <tr>
 
-                    <td>{{row.id}}</td>
+                    <!-- <td>{{row.id}}</td>
                     
                     <td>{{row.name}}</td>
-                    <td>{{row.author}}</td> 
+                    <td>{{row.name.author}}</td> 
                     <td>{{row.date}}</td>
                     <td>{{row.id}}</td>
-                    <td>{{row.topic_name}}</td>
+                    <td>{{row.name.topic_name}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.name.url}}</td>
+                    <td>{{row.name.email}}</td> -->
+
+                    <!-- <td>{{row.id}}</td>
+                    
+                    <td>{{row.name}}</td>
+                    <td>{{row.name.author}}</td> 
+                    <td>{{row.date}}</td>
+                    <td>{{row.id}}</td>
+                    <td>{{row..topic_name}}</td>
                     <td>{{row.name}}</td>
                     <td>{{row.url}}</td>
+                    <td>{{row.email}}</td> -->
+
+                    <!-- prefetch_releated -->
+                    <!-- <td>{{row.id}}</td>
+                    <td>{{row.eno}}</td>
+                    <td>{{row.dno}}</td>
+                    <td>{{row.ename}}</td>
+                    <td>{{row.dno.id}}</td>
+                    <td>{{row.dno}}</td>
+                    <td>{{row.dno.dna}}</td>
+                    <td>{{row.dno.loc}}</td>
+                    <td>{{row.dno.email}}</td> -->
+
+
+                    <!-- select_releated -->
+                    <td>{{row.id}}</td>
+                    <td>{{row.dno.eno}}</td>
+                    <td>{{row.dno}}</td>
+                    <td>{{row.ename}}</td>
+                    <td>{{row.dno.id}}</td>
+                    <td>{{row.dno}}</td>
+                    <td>{{row.dna}}</td>
+                    <td>{{row.loc}}</td>
                     <td>{{row.email}}</td>
+
+
+
 
                     <!--<td>{{row.topic_name}}</td>
                     <td>{{row.name}}</td>
