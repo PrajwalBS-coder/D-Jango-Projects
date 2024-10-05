@@ -27,30 +27,36 @@
             <tbody>
                 {% for row in data %}
                 <tr>
+
+                    <td>{{row.id}}</td>
                     
-                    
-                     <td>{{row.id}}</td>
-                    <td>{{row.author}}</td>
                     <td>{{row.name}}</td>
+                    <td>{{row.author}}</td> 
                     <td>{{row.date}}</td>
-                  <!--<td>{{row.topic_name}}</td>
+                    <td>{{row.id}}</td>
+                    <td>{{row.topic_name}}</td>
                     <td>{{row.name}}</td>
                     <td>{{row.url}}</td>
-                    <td>{{row.email}}</td> --> 
+                    <td>{{row.email}}</td>
+
+                    <!--<td>{{row.topic_name}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.url}}</td>
+                    <td>{{row.email}}</td> -->
 
                     <!-- <td>{{row.id}}</td>
                     <td>{{row.eno}}</td>
                     <td>{{row.dno}}</td>
                     <td>{{row.ename}}</td> -->
 
-                
+
                     <!-- <td>{{row.topic_name}}</td> -->
 
-                   
-                    
+
+
                 </tr>
                 {% endfor %}
-               
+
             </tbody>
 
         </table>
