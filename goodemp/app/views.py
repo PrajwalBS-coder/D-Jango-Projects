@@ -65,3 +65,10 @@ def insert2(re):
     else:
         return hr("Department Doenot exist")
 
+def disp(re):
+    columns1=[field.name for field in Emp._meta.get_fields()][1::]
+    columns2=[field.name for field in Dept._meta.get_fields()][1::]
+    columns=columns2+columns1
+    data=Dept.objects.prefetch_related('emp_set').all()
+    return render(re,'emp_dept.html',{'columns':columns,'data':data})
+ 

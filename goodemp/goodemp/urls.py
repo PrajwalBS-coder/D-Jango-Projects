@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('result/',op,name='op'),
     path('insert/',insert,name='insert'),
-    path('insert2/',insert2,name='insert2')
+    path('insert2/',insert2,name='insert2'),
+    path('disp/',disp,name='disp'),
 ]

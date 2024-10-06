@@ -63,15 +63,19 @@
 
 
                     <!-- select_releated -->
+                    {% for e in row.emp_set.all %}
+                    <td>{{e.id}}</td>
+                    <td>{{e.eno}}</td><td>{{e.dno}}</td>
+                    <td>{{e.ename}}</td>
+                    
+                    
+                    
                     <td>{{row.id}}</td>
-                    <td>{{row.dno.eno}}</td>
-                    <td>{{row.dno}}</td>
-                    <td>{{row.ename}}</td>
-                    <td>{{row.dno.id}}</td>
                     <td>{{row.dno}}</td>
                     <td>{{row.dna}}</td>
                     <td>{{row.loc}}</td>
-                    <td>{{row.email}}</td>
+                    <td>{{row.email}}</td>{% endfor %}
+
 
 
 
