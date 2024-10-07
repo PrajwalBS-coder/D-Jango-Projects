@@ -24,6 +24,7 @@ urlpatterns = [
     path('insert_topic/',insert_topic,name='insert_topic'),
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
     path('topic/',topi,name='topic'),
+    path('web/',web,name='web')
     # path('cap/',cap,name='cap'),
     # path('cap2/',cap2,name='cap2')
 ]

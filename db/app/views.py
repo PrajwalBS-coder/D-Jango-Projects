@@ -86,7 +86,9 @@ def insert_webpage(re):
     else:
         return hr("TOPIC NAHI HAI BHAI")
 
-
+def web(re):
+    data=webpage.objects.all()
+    return render(re,'webpage.html',{'webpage':data})
 # ONE TEMPLATE FOR ALL THE WEB PAGE
 
 def topi(re):
@@ -128,7 +130,7 @@ def topi(re):
     # data = access.objects.filter(date__week=15,author__contains='e')#work for and condition it's shortcut for baove condition
     # data = access.objects.filter(Q(date__week=25) | Q(author__regex='A'))#we can use Qonly dealing with orWe cxan't use shortcut 
     # data=webpage.objects.prefetch_related('access_set').all()
-    data=dept.objects.prefetch_related('emp_set').all()
+    data=emp.objects.select_related('dno').all()
 
 
 
