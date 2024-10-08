@@ -71,4 +71,16 @@ def disp(re):
     columns=columns2+columns1
     data=Dept.objects.prefetch_related('emp_set').all()
     return render(re,'emp_dept.html',{'columns':columns,'data':data})
- 
+
+def empmgr(re):
+    columns1=[field.name for field in Emp._meta.get_fields()][1::]
+    columns2=[field.name for field in Dept._meta.get_fields()][1::]
+    columns=columns1+columns2
+    # emp=Emp.objects.select_related('mgr').all().filter(sal__lt=10000).filter(ename__startswith='A').filter(dno__dname='Research')
+    # 
+    # emp=Emp.objects.select_related('dno').all().filter(dno__deptno=3).filter(sal__gt=150000)
+    emp=Emp.objects.select_related('dno').all().filter(dno__deptno=3).filter(sal__gt=150000)
+    return render(re,'empmgr.html',{'columns':columns,'data':emp})
+def empmgrdept(re):
+    data=Emp.objects.select_related('mgr','dno').all().filter(mgr__isnull=True).filter(dno__dname='Research')
+    return render(re,'empmgrdept.html',{'data':data})

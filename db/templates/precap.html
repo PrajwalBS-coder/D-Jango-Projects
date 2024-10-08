@@ -26,32 +26,48 @@
 
             <tbody>
                 {% for row in data %}
-                <tr>
-
-                  
-
-                    <td>{{row.deptno}}</td>
-                    <td>{{row.dname}}</td>
-                    <!-- <td>{{row.loc}}</td> -->
-
+                <tr>              
+                    <td>{{row.id}}</td>  
+                    <td>{{row.country_name}}</td>  
+                    <td>{{row.country_name}}</td>
+                    <td>{{row.capital_name}}</td>
                     <!-- select_releated -->
-                  
-                    {% for e in row.emp_set.all %}
-                    <td>{{e.id}}</td>
-                    <td>{{e.eno}}</td>
-                    <td>{{e.ename}}</td>
-                    <td>{{e.job}}</td>
-                    <td>{{e.hiredate}}</td>
-                    <td>{{e.sal}}</td>
-                    <td>{{e.dno}}</td>
-                    <td>{{e.mgr}}</td>
-                    <td>{{e.comm}}</td>
-
+                    {% for c in row.webpage_set.all %}
+                    <td>{{c.country_name}}</td>
+                    <td>{{c.capital_name}}</td>
                     
+                    
+                    
+                    <td>{{row.country_name}}</td>
+                    <!-- <td>{{c.id}}</td>
+                    <td>{{c.topic_name}}</td>
+                    <td>{{c.name}}</td>
+                    
+                    <td>{{c.email}}</td>
+                    <td>{{c.url}}</td> -->
+
+
                     {% endfor %}
+
+
+                    <!--<td>{{row.topic_name}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.url}}</td>
+                    <td>{{row.email}}</td> -->
+
+                    <!-- <td>{{row.id}}</td>
+                    <td>{{row.eno}}</td>
+                    <td>{{row.dno}}</td>
+                    <td>{{row.ename}}</td> -->
+
+
+                    <!-- <td>{{row.topic_name}}</td> -->
+
+
 
                 </tr>
                 {% endfor %}
+                <br>
 
             </tbody>
 

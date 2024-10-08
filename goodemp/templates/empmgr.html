@@ -13,7 +13,6 @@
     <center>
         {% if columns %}
         <h1>Show Data</h1>
-
         <table class="table table-striped">
 
             <thead>
@@ -23,32 +22,24 @@
                     {% endfor %}
                 </tr>
             </thead>
-
             <tbody>
-                {% for row in data %}
-                <tr>
+                {% for e in data %}
 
-                  
+                <td>{{e.eno}}</td>
+                <td>{{e.ename}}</td>
+                <td>{{e.job}}</td>
+                <td>{{e.hiredate}}</td>
+                <td>{{e.sal}}</td>
+                <td>{{e.dno}}</td>
+                <td>{{e.mgr}}</td>
+                <td>{{e.comm}}</td>
+                <td>{{e.dno.deptno }}</td>
+                <td>{{ e.dno.dname }}</td>
+                <td>{{ e.dno.loc }}</td>
+                <!-- <td>{{e.deptno }}</td>
+                <td>{{ e.dname }}</td>
+                <td>{{ e.loc }}</td> -->
 
-                    <td>{{row.deptno}}</td>
-                    <td>{{row.dname}}</td>
-                    <!-- <td>{{row.loc}}</td> -->
-
-                    <!-- select_releated -->
-                  
-                    {% for e in row.emp_set.all %}
-                    <td>{{e.id}}</td>
-                    <td>{{e.eno}}</td>
-                    <td>{{e.ename}}</td>
-                    <td>{{e.job}}</td>
-                    <td>{{e.hiredate}}</td>
-                    <td>{{e.sal}}</td>
-                    <td>{{e.dno}}</td>
-                    <td>{{e.mgr}}</td>
-                    <td>{{e.comm}}</td>
-
-                    
-                    {% endfor %}
 
                 </tr>
                 {% endfor %}
@@ -59,14 +50,19 @@
         {% else %}
         <h1>No Data</h1>
         {% endif %}
-    </center>
 
+
+
+
+
+    </center>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>

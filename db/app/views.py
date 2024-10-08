@@ -137,3 +137,21 @@ def topi(re):
 
     return render(re,'all.html',{'columns':columns,'data':data})
 
+def empdept(re):
+    columns1=[field.name for field in emp._meta.get_fields()]
+    columns2=[field.name for field in dept._meta.get_fields()][1::]
+    columns=columns1+columns2
+    data=dept.objects.prefetch_related('emp_set').all()
+    return render(re,'all.html',{'columns':columns,'data':data})
+def precap(re):
+    columns1=[field.name for field in capital._meta.get_fields()]
+    columns2=[field.name for field in country._meta.get_fields()][1::]
+    columns=columns1+columns2
+    data=capital.objects.select_related('country_name').all()
+    return render(re,'precap.html',{'columns':columns,'data':data})
+def topic_webpage_prefetch(re):
+    columns1=[field.name for field in topic._meta.get_fields()][1::]
+    columns2=[field.name for field in webpage._meta.get_fields()][1::]
+    columns=columns1+columns2
+    data=topic.objects.prefetch_related('webpage_set').all()
+    return render(re,'precap.html',{'columns':columns,'data':data})

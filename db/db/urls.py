@@ -24,7 +24,10 @@ urlpatterns = [
     path('insert_topic/',insert_topic,name='insert_topic'),
     path('insert_webpage/',insert_webpage,name='insert_webpage'),
     path('topic/',topi,name='topic'),
-    path('web/',web,name='web')
+    path('web/',web,name='web'),
+    path('empdept/',empdept,name='empdept'),
+    path('precap/',precap,name='precap'),
+    path('topic_webpage_prefetch/',topic_webpage_prefetch,name='topic_webpage_prefetch'),
     # path('cap/',cap,name='cap'),
     # path('cap2/',cap2,name='cap2')
 ]

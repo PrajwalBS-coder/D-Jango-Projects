@@ -51,7 +51,7 @@
                     <td>{{row.email}}</td> -->
 
                     <!-- prefetch_releated -->
-                    <td>{{row.id}}</td>
+                    <!-- <td>{{row.id}}</td>
                     <td>{{row.eno}}</td>
                     <td>{{row.dno}}</td>
                     <td>{{row.ename}}</td>
@@ -59,12 +59,12 @@
                     <td>{{row.dno}}</td>
                     <td>{{row.dno.dna}}</td>
                     <td>{{row.dno.loc}}</td>
-                    <td>{{row.dno.email}}</td>
+                    <td>{{row.dno.email}}</td> -->
 
 
                     <!-- select_releated -->
-                    <!-- {% for e in row.emp_set.all %} -->
-                    <!-- <td>{{e.id}}</td>
+                    {% for e in row.emp_set.all %}
+                    <td>{{e.id}}</td>
                     <td>{{e.eno}}</td>
                     <td>{{e.dno}}</td>
                     <td>{{e.ename}}</td>
@@ -75,9 +75,9 @@
                     <td>{{row.dno}}</td>
                     <td>{{row.dna}}</td>
                     <td>{{row.loc}}</td>
-                    <td>{{row.email}}</td> -->
+                    <td>{{row.email}}</td>
 
-                    <!-- {% endfor %} -->
+                    {% endfor %}
 
 
                     <!--<td>{{row.topic_name}}</td>
