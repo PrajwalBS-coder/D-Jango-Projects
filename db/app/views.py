@@ -131,18 +131,14 @@ def topi(re):
     # data = access.objects.filter(Q(date__week=25) | Q(author__regex='A'))#we can use Qonly dealing with orWe cxan't use shortcut 
     # data=webpage.objects.prefetch_related('access_set').all()
     data=emp.objects.select_related('dno').all()
-
-
-
-
     return render(re,'all.html',{'columns':columns,'data':data})
 
 def empdept(re):
-    columns1=[field.name for field in emp._meta.get_fields()]
-    columns2=[field.name for field in dept._meta.get_fields()][1::]
-    columns=columns1+columns2
+    ecolumns=[field.name for field in emp._meta.get_fields()]
+    dcolumns=[field.name for field in dept._meta.get_fields()][1::]
+    # columns=columns1+columns2
     data=dept.objects.prefetch_related('emp_set').all()
-    return render(re,'all.html',{'columns':columns,'data':data})
+    return render(re,'prefetch.html',{'dcolumns':dcolumns,'ecolumns':ecolumns,'data':data})
 def precap(re):
     columns1=[field.name for field in capital._meta.get_fields()]
     columns2=[field.name for field in country._meta.get_fields()][1::]
