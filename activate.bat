@@ -7,7 +7,7 @@
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-@set "VIRTUAL_ENV=D:\DJango\dj2"
+@set "VIRTUAL_ENV=D:\DJango\dj3\env"
 
 @set "VIRTUAL_ENV_PROMPT="
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (

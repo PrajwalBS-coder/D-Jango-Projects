@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from app.models import *
 from django.http import HttpResponse as hr
+from django.db.models import *
 # Create your views here.
 def op(re):
     emp=Emp.objects.all()
@@ -84,3 +85,18 @@ def empmgr(re):
 def empmgrdept(re):
     data=Emp.objects.select_related('mgr','dno').all().filter(mgr__isnull=True).filter(dno__dname='Research')
     return render(re,'empmgrdept.html',{'data':data})
+def agg(re):
+    # data=Emp.objects.all().aggregate(Avg('sal'))
+    # data=Emp.objects.values('dno').annotate(Avg('sal'))
+    # emp=Emp.objects.filter(dno=3).annotate(Avg('sal'))
+    # print(data)
+    data=Emp.objects.all().aggregate(avgsal=Avg('sal'))#dict{"avgsal":decimal(812761287.999)}
+    emp=Emp.objects.select_related('dno').filter(sal__gt=data['avgsal'])
+    emp=Emp.objects.all().filter(sal__lt=(Emp.objects.all().aggregate(ass=Avg('sal')))['ass'])
+    emp=Emp.objects.all().filter(sal__lt=(Emp.objects.all().aggregate(ass=Sum('sal')))['ass'])
+    emp=Emp.objects.all().filter(sal__gt=(Emp.objects.all().aggregate(ass=Min('sal')))['ass'])
+    emp=Emp.objects.all().filter(sal__lt=(Emp.objects.all().aggregate(ass=Max('sal')))['ass'])
+    data=Emp.objects.all().aggregate(Total_count=Count('sal'))
+    print(data)
+    return render(re,'op.html',{'emp':emp,'tc':data})
+    

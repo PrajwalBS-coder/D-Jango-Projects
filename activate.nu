@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = 'D:\DJango\dj2'
+    let virtual_env = 'D:\DJango\dj3\env'
     let bin = 'Scripts'
 
     let is_windows = ($nu.os-info.family) == 'windows'

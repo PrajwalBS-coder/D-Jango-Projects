@@ -3,6 +3,7 @@ from app.models import *
 from django.http import HttpResponse as hr
 from django.db.models.functions import Length
 from django.db.models import Q
+from django.db.models import *
 # Create your views here.
 
 def op(re):
@@ -157,3 +158,6 @@ def webpage_access_prefetch(re):
     columns=columns2+columns1
     data=webpage.objects.prefetch_related('access_set').all()
     return render(re,'precap.html',{'columns':columns,'data':data})
+def agg(re):
+    data=emp.objects.all().aggregate(Avg('sal'))
+    print(data)
