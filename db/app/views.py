@@ -151,3 +151,9 @@ def topic_webpage_prefetch(re):
     columns=columns1+columns2
     data=topic.objects.prefetch_related('webpage_set').all()
     return render(re,'precap.html',{'columns':columns,'data':data})
+def webpage_access_prefetch(re):
+    columns1=[field.name for field in access._meta.get_fields()][1::]
+    columns2=[field.name for field in webpage._meta.get_fields()][1::]
+    columns=columns2+columns1
+    data=webpage.objects.prefetch_related('access_set').all()
+    return render(re,'precap.html',{'columns':columns,'data':data})

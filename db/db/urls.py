@@ -28,6 +28,7 @@ urlpatterns = [
     path('empdept/',empdept,name='empdept'),
     path('precap/',precap,name='precap'),
     path('topic_webpage_prefetch/',topic_webpage_prefetch,name='topic_webpage_prefetch'),
+    path('webpage_access_prefetch/',webpage_access_prefetch,name='webpage_access_prefetch'),
     # path('cap/',cap,name='cap'),
     # path('cap2/',cap2,name='cap2')
 ]

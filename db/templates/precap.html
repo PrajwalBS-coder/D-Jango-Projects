@@ -26,19 +26,28 @@
 
             <tbody>
                 {% for row in data %}
-                <tr>              
-                    <td>{{row.id}}</td>  
-                    <td>{{row.country_name}}</td>  
+                <tr>
+                    <td>{{row.id}}</td>
+                    <td>{{row.topic_name}}</td>
+                    <td>{{row.name}}</td>
+                    <td>{{row.url}}</td>
+                    <td>{{row.name}}</td>
+                    {% for access_data in row.access_set.all %}
+                    <td>{{access_data.name}}</td>
+                    <td>{{access_data.author}}</td>
+                    <td>{{access_data.date}}</td>
+                    {% endfor %}
+                    <!-- <td>{{row.country_name}}</td>  
                     <td>{{row.country_name}}</td>
-                    <td>{{row.capital_name}}</td>
+                    <td>{{row.capital_name}}</td> -->
                     <!-- select_releated -->
-                    {% for c in row.webpage_set.all %}
-                    <td>{{c.country_name}}</td>
+                    <!-- {% for c in row.webpage_set.all %} -->
+                    <!-- <td>{{c.country_name}}</td>
                     <td>{{c.capital_name}}</td>
                     
                     
                     
-                    <td>{{row.country_name}}</td>
+                    <td>{{row.country_name}}</td> -->
                     <!-- <td>{{c.id}}</td>
                     <td>{{c.topic_name}}</td>
                     <td>{{c.name}}</td>

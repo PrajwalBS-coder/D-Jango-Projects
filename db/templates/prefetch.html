@@ -23,47 +23,47 @@
                 <th>Employee Details</th>
 
             </thead>
-            
-                {% for dept_row_data in data %}
 
-                <tr>
-                    <td>{{dept_row_data.id}}</td>
-                    <td>{{dept_row_data.dno}}</td>
-                    <td>{{dept_row_data.dna}}</td>
-                    <td>{{dept_row_data.loc}}</td>
-                    <td>{{dept_row_data.email}}</td>
-                    <td>
+            {% for dept_row_data in data %}
 
-                        <table class="table table-striped">
+            <tr>
+                <td>{{dept_row_data.id}}</td>
+                <td>{{dept_row_data.dno}}</td>
+                <td>{{dept_row_data.dna}}</td>
+                <td>{{dept_row_data.loc}}</td>
+                <td>{{dept_row_data.email}}</td>
+                <td>
 
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Eno</th>
-                                    <th>DNO</th>
-                                    <th>Ename</th>
+                    <table class="table table-striped">
 
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for emp_row_data in dept_row_data.emp_set.all %}
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Eno</th>
+                                <th>DNO</th>
+                                <th>Ename</th>
 
-                                <tr>
-                                    <td>{{emp_row_data.id}}</td>
-                                    <td>{{emp_row_data.eno}}</td>
-                                    <td>{{emp_row_data.dno}}</td>
-                                    <td>{{emp_row_data.ename}}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for emp_row_data in dept_row_data.emp_set.all %}
+
+                            <tr>
+                                <td>{{emp_row_data.id}}</td>
+                                <td>{{emp_row_data.eno}}</td>
+                                <td>{{emp_row_data.dno}}</td>
+                                <td>{{emp_row_data.ename}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
 
 
-                </tr>
+            </tr>
 
-                </td>
-                {% endfor %}
-            
+            </td>
+            {% endfor %}
+
         </table>
         {% else %}
         <h1>No Data</h1>
