@@ -8,7 +8,8 @@ def get_name(re):
         form=Name(re.POST)
         if form.is_valid():
             # return hr("/OK Done/")
-            return hred('thank')
+            return hred('/thank/')
+            
     else:
         form=Name()
     return render(re,'na.html',{'form':form})
