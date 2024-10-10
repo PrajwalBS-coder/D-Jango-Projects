@@ -10,35 +10,41 @@
 </head>
 
 <body>
-    {% for t in tc %}
+    <!-- {% for t in tc %}
     <h1>{{t}}</h1>
-    {% endfor %}
-    {% if emp %}
+    {% endfor %} -->
+    {% if data %}
 
     <table class="table table-dark ">
         <thead>
             <tr>
-                <th scope="col">E_NO</th>
+                <!-- <th scope="col">E_NO</th>
                 <th scope="col">Name</th>
                 <th scope="col">Job</th>
                 <th scope="col">Joining Date</th>
                 <th scope="col">Manager_No</th>
                 <th scope="col">Salary</th>
                 <th scope="col">Department</th>
-                <th scope="col">Commission</th>
+                <th scope="col">Commission</th> -->
+                <th scope="col">Product Category</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
             </tr>
         </thead>
         <tbody>
-            {% for d in emp %}
+            {% for d in data %}
             <tr>
-                <th scope="row">{{ d.eno}}</th>
+                <!-- <th scope="row">{{ d.eno}}</th>
                 <th scope="row">{{ d.ename}}</th>
                 <th scope="row">{{ d.job}}</th>
                 <th scope="row">{{ d.hiredate}}</th>
                 <th scope="row">{{ d.mgr}}</th>
                 <th scope="row">{{ d.sal}}</th>
                 <th scope="row">{{ d.dno}}</th>
-                <th scope="row">{{ d.comm}}</th>
+                <th scope="row">{{ d.comm}}</th> -->
+                <th scope="row">{{ d.pcid.pctype}}</th>
+                <th scope="row">{{ d.pname}}</th>
+                <th scope="row">{{ d.price}}</th>
                 
             </tr>
             {% endfor %}

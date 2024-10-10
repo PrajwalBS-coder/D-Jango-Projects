@@ -99,4 +99,33 @@ def agg(re):
     data=Emp.objects.all().aggregate(Total_count=Count('sal'))
     print(data)
     return render(re,'op.html',{'emp':emp,'tc':data})
-    
+
+def mock(re):
+    id=int(input("ENTER ID"))
+    pc=input("ENTER CATEGORY")
+    ProductCat.objects.get_or_create(pcid=id,pctype=pc)
+
+def mockins(re):
+    id=int(input("ENTER ID"))
+    na=input("ENTER name")
+    pr=input("ENTER price")
+    date=input("ENTER Manufacture Date")
+    place=input("ENTER manufacture Place")
+    pc=input("ENTER PCID")
+    pid=ProductCat.objects.filter(pcid=pc)
+    Products.objects.get_or_create(pid=id,pname=na,price=pr,mdate=date,mplace=place,pcid=pid[0])
+
+def q(re):
+    data=Products.objects.select_related('pcid')
+    data=Products.objects.all().filter(price__lt=5000)
+    data=Products.objects.all().filter(price__gt=5000)
+    data=Products.objects.all().filter(pname__startswith='p')
+    avsal=Products.objects.all().aggregate(Avg('price'))
+    avsal=Products.objects.all().aggregate(Min('price'))
+    avsal=Products.objects.all().aggregate(Max('price'))
+    avsal=Products.objects.all().aggregate(Count('price'))
+    data=Products.objects.all().filter(price__gt=(Products.objects.all().aggregate(avg=Avg('price')))['avg'])
+    data=Products.objects.all().filter(price__lt=(Products.objects.all().aggregate(avg=Avg('price')))['avg'])
+    print(avsal)
+    return render(re,'op.html',{'data':data})
+    # print(data)

@@ -45,3 +45,16 @@ class emp(models.Model):
     def __str__(self):
         return self.ename
 
+class ProductCat(models.Model):
+    pcid=models.IntegerField(primary_key=True)
+    pctype=models.CharField(max_length=100)
+    def __str__(s):
+        return s.pctype
+class Products(models.Model):
+    pid=models.IntegerField(primary_key=True)
+    pname=models.CharField(max_length=100)
+    price=models.DecimalField(max_digits=10,decimal_places=2)
+    mdate=models.DateField()
+    mplace=models.CharField(max_length=100)
+    pcid=models.ForeignKey(ProductCat,on_delete=models.CASCADE)
+

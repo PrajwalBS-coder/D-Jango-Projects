@@ -26,5 +26,8 @@ urlpatterns = [
     path('disp/',disp,name='disp'),
     path('empmgr/',empmgr,name='empmgr'),
     path('empmgrdept/',empmgrdept,name='empmgrdept'),
-    path('agg/',agg,name='agg')
+    path('agg/',agg,name='agg'),
+    path('mock/',mock,name='mock'),
+    path('mockins/',mockins,name='mockins'),
+    path('q',q,name='q')
 ]
