@@ -50,4 +50,23 @@ def Queries(re):
     p= Product.objects.all().aggregate(Count('price'))
     p= Product.objects.all().aggregate(Sum('price'))
     print(p)
+    #updating single row
+    Product.objects.filter(pname="Puma").update(price=2545)
+    #updating multiple row
+    Product.objects.filter(pcid=2).update(price=1522)
+    #Zero Rows Nothing Happend
+    Product.objects.filter(pcid=4).update(price=1522)
+
+    #update_or_create
+    Product.objects.update_or_create(pname='Puma',defaults={"price":8966})
+   
+    #update_or_create MultipleObjectsReturned at /Queries/get() returned more than one Product -- it returned 2!
+    # Product.objects.update_or _create(pcid=2,defaults={"price":8966})
+
+
+    Product.objects.update_or_create(pcid=ProductCategoryies.objects.get(pcid=3),defaults={"price":8966})
+
+    
+
+
     return render(re,'all.html',{'data':PCO,'columns':columns})

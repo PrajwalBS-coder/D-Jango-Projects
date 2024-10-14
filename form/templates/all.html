@@ -47,16 +47,14 @@
                 <!-- <th>{{data.pcid}}</th>
                 <th>{{data.product_category_name}}</th>
                 <th>{{data.source}}</th> -->
-                <th>{{data.pid}}</th>
+                <!-- <th>{{data.pid}}</th>
                 <th>{{data.pcid}}</th>
                 <th>{{data.pname}}</th>
                 <th>{{data.price}}</th>
                 <th>{{data.manufacture}}</th>
-                <th>{{data.mdate}}</th>
-                <th>{{data.pcid.pcid}}</th>
-                <th>{{data.pcid.product_category_name}}</th>
-                <th>{{data.pcid.source}}</th> 
-                <!-- {% for pdata in data.product_set.all %}
+                <th>{{data.mdate}}</th> -->
+               
+                {% for pdata in data.product_set.all %}
                 <th>{{pdata.pid}}</th>
                 <th>{{pdata.pcid}}</th>
                 <th>{{pdata.pname}}</th>
@@ -66,7 +64,7 @@
 
                 <th>{{data.pcid}}</th>
                 <th>{{data.product_category_name}}</th>
-                <th>{{data.source}}</th> -->
+                <th>{{data.source}}</th>
                
             </tr>
             {% endfor %}
