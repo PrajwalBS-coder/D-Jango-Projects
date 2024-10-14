@@ -56,7 +56,9 @@ def Queries(re):
     Product.objects.filter(pcid=2).update(price=1522)
     #Zero Rows Nothing Happend
     Product.objects.filter(pcid=4).update(price=1522)
+    # Product.objects.filter(price=1522).update(pcid=4)# it'll throw an error cause 4 does not exist
 
+    Product.objects.filter(price=1522).update(pcid=3)
     #update_or_create
     Product.objects.update_or_create(pname='Puma',defaults={"price":8966})
    
@@ -64,9 +66,10 @@ def Queries(re):
     # Product.objects.update_or _create(pcid=2,defaults={"price":8966})
 
 
-    Product.objects.update_or_create(pcid=ProductCategoryies.objects.get(pcid=3),defaults={"price":8966})
+    # Product.objects.update_or_create(pcid=ProductCategoryies.objects.get(pcid=3),defaults={"price":8966})
+    Product.objects.update_or_create(pname='Puma',defaults={"pcid":ProductCategoryies.objects.get(pcid=3),"price":8966})#IntegrityError at /Queries/NOT NULL constraint failed: app_product.mdate
+    Product.objects.update_or_create(pname='Adidas',defaults={"pcid":ProductCategoryies.objects.get(pcid=1),"price":8966,"mdate":'2022-06-05'})#Creating new Row of data 
 
-    
 
 
     return render(re,'all.html',{'data':PCO,'columns':columns})
