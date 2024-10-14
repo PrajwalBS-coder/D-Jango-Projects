@@ -18,8 +18,11 @@ def thank(re):
     return render(re,'thanks.html')
 
 def Patients_details(re):
-    if re.method=='POST':
+    if re.method=="POST":
         form=PatientDetails(re.POST)
         if form.is_valid():
             form.save()
-            return hred()
+            return hred('/thank/')
+    else:
+        form=PatientDetails()
+    return render(re,'na.html',{'form':form})

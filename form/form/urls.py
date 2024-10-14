@@ -21,5 +21,6 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('naform/',get_name,name='naform'),
-    path('thank/',thank,name='thank')
+    path('thank/',thank,name='thank'),
+    path('Patients_details/',Patients_details,name='Patients_details'),
 ]
