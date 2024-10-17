@@ -26,6 +26,13 @@ def Patients_details(re):
             pk=re.POST.get('delete')
             print(pk)
             Patient.objects.get(id=pk).delete()
+        elif 'Edit' in re.POST:
+            pk=re.POST.get('Edit')
+            form=PatientDetails(instance=Patient.objects.get(id=pk))
+        elif 'save' in re.POST:
+            pk=re.POST.get('save')
+            form=PatientDetails(re.POST,instance=Patient.objects.get(id=pk))
+            form.save()
         if form.is_valid():
             form.save()
             return hred('/thank/')

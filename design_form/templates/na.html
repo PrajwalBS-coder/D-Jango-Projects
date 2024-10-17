@@ -13,13 +13,18 @@
 <body>
     <form action="" method="post">
         {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-
+        {% if not form.instance.id%}
+      {% include 'save.html' %}
+      {% endif %}
         <hr>
         {% for d in details %}
-        <input type="text" value={{d.name}}>
-        <button formnovalidate name="delete" value={{d.id}}>Delete</button><br>
+        {% if form.instance.id == d.id %}
+        {% include 'save.html' %}
+        {% else %}
+        <input type="text" value={{d.name}}--{{d.blood_group}}>
+        <button formnovalidate name="delete" value={{d.id}}>Delete</button>
+        <button formnovalidate name="Edit" value={{d.id}}>Edit</button><br>
+        {%endif%}
         {% endfor %}
 
 
