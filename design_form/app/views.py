@@ -18,11 +18,18 @@ def thank(re):
     return render(re,'thanks.html')
 
 def Patients_details(re):
+    details=Patient.objects.all()
     if re.method=="POST":
         form=PatientDetails(re.POST)
+        if 'delete' in re.POST:
+            print("delete")
+            pk=re.POST.get('delete')
+            print(pk)
+            Patient.objects.get(id=pk).delete()
         if form.is_valid():
             form.save()
             return hred('/thank/')
     else:
         form=PatientDetails()
-    return render(re,'na.html',{'form':form})
+        
+    return render(re,'na.html',{'form':form,'details':details})
