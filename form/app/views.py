@@ -40,10 +40,32 @@ def webpage_insert(re):
         na=re.POST['name']
         url=re.POST['url']
         em=re.POST['email']
-        to=topic.objects.get(topic_name=tn)
-        wo=webpage.objects.get_or_create(topic_name=to[0],name=na,url=url,email=em)
-        if wo:
-            return hred('/thank/') 
+        to=topic.objects.filter(topic_name=tn)
+        if to:
+            print("INSide to")
+            wo=webpage.objects.get_or_create(topic_name=to[0],name=na,url=url,email=em)
+            if wo:
+                return hred('/thank/') 
+            else:
+                return hred('/webpage_insert/')
         else:
-            return hred('/webpage_insert/') 
+            hr("Topic Does't Exist")
     return render(re,'webpage_insert.html')
+
+
+def access_insert(re):
+    if re.method=='POST':
+        na=re.POST['name']
+        author=re.POST['author']
+        da=re.POST['date']
+        wo=webpage.objects.filter(name=na)
+        if wo:
+            # print("INSide to")
+            ao=access.objects.get_or_create(name=wo[0],author=author,date=da)
+            if wo:
+                return hred('/thank/') 
+            else:
+                return hred('/webpage_insert/')
+        else:
+            hr("Topic Does't Exist")
+    return render(re,'access_insert.html')

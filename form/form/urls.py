@@ -24,5 +24,6 @@ urlpatterns = [
     path('thank/',thank,name='thank'),
     path('Patients_details/',Patients_details,name='Patients_details'),
     path('topic_insert/',topic_insert,name='topic_insert'),
-    path('webpage_insert/',webpage_insert,name='webpage_insert')
+    path('webpage_insert/',webpage_insert,name='webpage_insert'),
+    path('access_insert/',access_insert,name='access_insert'),
 ]
