@@ -26,3 +26,24 @@ def Patients_details(re):
     else:
         form=PatientDetails()
     return render(re,'na.html',{'form':form})
+
+def topic_insert(re):
+    if re.method=='POST':
+        tn=re.POST['topic']
+        to=topic.objects.get_or_create(topic_name=tn)
+
+        return hred('/thank/') 
+    return render(re,'topic_insert.html')
+def webpage_insert(re):
+    if re.method=='POST':
+        tn=re.POST['topic']
+        na=re.POST['name']
+        url=re.POST['url']
+        em=re.POST['email']
+        to=topic.objects.get(topic_name=tn)
+        wo=webpage.objects.get_or_create(topic_name=to[0],name=na,url=url,email=em)
+        if wo:
+            return hred('/thank/') 
+        else:
+            return hred('/webpage_insert/') 
+    return render(re,'webpage_insert.html')

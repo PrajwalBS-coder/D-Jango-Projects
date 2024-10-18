@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="topic">TOPIC NAME</label>
+        <input type="text" name="topic" id="topic"><br>
+        <label for="name">NAME</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="url">URL</label>
+        <input type="url" name="url" id="url"><br>
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" id="email"><br>
+
+        <input type="submit" value="Insert Topic">
+
+    </form>
+
+</body>
+
+</html>
