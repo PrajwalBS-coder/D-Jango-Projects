@@ -1,9 +1,9 @@
 from django import forms
 from app.models import *
 class Name(forms.Form):
-    na=forms.CharField(label='Name',max_length=100)
-    blood_gorup=forms.CharField(label='Blood Group',max_length=100)
-    health_tips=forms.CharField(label='Tips',max_length=100)
+    na=forms.CharField(max_length=100)
+    number=forms.IntegerField()
+    
 
 class PatientDetails(forms.ModelForm):
     # na=forms.CharField(label='Name',max_length=100)

@@ -7,9 +7,13 @@ def get_name(re):
     if re.method=="POST":
         form=Name(re.POST)
         if form.is_valid():
-            # return hr("/OK Done/")
-            return hred('/thank/')
-            
+            obj=MyModel.objects.get_or_create(fullname=re.POST['na'],mobile_number=re.POST['number'])
+            if obj:
+                return hred('/thank/')
+            else:
+                hr("WrongONe")
+            # na=Name.fullname
+            # return hr(re.POST['na'])
     else:
         form=Name()
     return render(re,'na.html',{'form':form})
