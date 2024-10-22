@@ -39,37 +39,38 @@ def topic_insert(re):
         return hred('/thank/') 
     return render(re,'topic_insert.html')
 def webpage_insert(re):
+    obj=topic.objects.all()
     if re.method=='POST':
-        tn=re.POST['topic']
+        tn=re.POST['tn']
         na=re.POST['name']
         url=re.POST['url']
         em=re.POST['email']
-        to=topic.objects.filter(topic_name=tn)
+        to=topic.objects.get(topic_name=tn)
         if to:
             print("INSide to")
-            wo=webpage.objects.get_or_create(topic_name=to[0],name=na,url=url,email=em)
+            wo=webpage.objects.get_or_create(topic_name=to,name=na,url=url,email=em)
             if wo:
                 return hred('/thank/') 
             else:
-                return hred('/webpage_insert/')
+                return hred('/webpage_insert/')  
         else:
             hr("Topic Does't Exist")
-    return render(re,'webpage_insert.html')
+    return render(re,'webpage_insert.html',{'to':obj})
 
 
 def access_insert(re):
+    obj=webpage.objects.all()
     if re.method=='POST':
-        na=re.POST['name']
         author=re.POST['author']
         da=re.POST['date']
-        wo=webpage.objects.filter(name=na)
+        wo=webpage.objects.get(id=re.POST['tn'])
         if wo:
             # print("INSide to")
-            ao=access.objects.get_or_create(name=wo[0],author=author,date=da)
+            ao=access.objects.get_or_create(name=wo,author=author,date=da)
             if wo:
                 return hred('/thank/') 
             else:
                 return hred('/webpage_insert/')
         else:
             hr("Topic Does't Exist")
-    return render(re,'access_insert.html')
+    return render(re,'access_insert.html',{'wo':obj})
