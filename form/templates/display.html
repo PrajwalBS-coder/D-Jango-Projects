@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><center>
+    <table border="3px">
+        <tr>
+            <th>PK</th>
+            <th>Topic_NMAE</th>
+            <th>NAME</th>
+            <th>URL</th>
+            <th>Email</th>
+        </tr>
+        {%for o in Cobj%}
+        <tr>
+
+            <td>{{o.id}}</td>
+            <td>{{o.name}}</td>
+            <td>{{o.author}}</td>
+            <td>{{o.date}}</td>
+            
+        </tr>
+        {% endfor %}
+    </table></center>
+</body>
+</html>

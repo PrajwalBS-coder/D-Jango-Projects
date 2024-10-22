@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse as hr
 from django.http import HttpResponseRedirect as hred
 from .forms import * 
+from django.db.models import *
 # Create your views here.
 def get_name(re):
     if re.method=="POST":
@@ -74,3 +75,25 @@ def access_insert(re):
         else:
             hr("Topic Does't Exist")
     return render(re,'access_insert.html',{'wo':obj})
+
+def multiple_topic_data(re):
+    Pobj=topic.objects.all()
+    if(re.method=='POST'):
+        Cobj=webpage.objects.none()
+        MulObj=re.POST.getlist('tn')
+        for i in MulObj:
+            Cobj=Cobj | webpage.objects.filter(topic_name=i)#if we use get() it won't if we use get method 
+        return render(re,'display.html',{'Cobj':Cobj})
+    return render(re,'multipletopicrecord.html',{'to':Pobj})
+
+def multiple_webpage_data(re):
+    Pobj=webpage.objects.all()
+    if(re.method=='POST'):
+        columns=[c.name for c in access._meta.get_fields()]
+        Cobj=access.objects.none()
+        MulObj=re.POST.getlist('tn')
+        print(MulObj)
+        for i in MulObj:
+            Cobj=Cobj | access.objects.filter(id=i)#if we use it won't if we use get method 
+        return render(re,'displayaccess.html',{'Cobj':Cobj,'columns':columns})
+    return render(re,'multiaccess.html',{'to':Pobj})

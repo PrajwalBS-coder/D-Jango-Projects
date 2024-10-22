@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="topic">TOPIC NAME</label>
+        <select name="tn" id="tn" multiple>
+            {% for t in to %}
+            <option value="{{t.topic_name}}">{{t.topic_name}}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Multiple Topic data">
+    </form>
+
+</body>
+
+</html>
