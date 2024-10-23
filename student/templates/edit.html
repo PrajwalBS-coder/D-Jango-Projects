@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <form action="/insert_form/" method="post">
+            {% csrf_token %}
+
+            <label for="na">NAME</label>
+            <input type="text" name="na" id="na" value="{{d.name}}"><br>
+            <label for="ge">GENDER</label>
+            <input type="text" name="ge" id="ge" value="{{d.gender}}"><br>
+            <label for="na">SCHOOL</label>
+            <select name="sc" id="sc">
+                {% for s in st %}
+                <option value="{{s.name}}">{{s.name}}</option>
+                {% endfor %}
+            </select><br>
+
+            <input type="submit" value="UPDATE">
+        </form>
+    </center>
+</body>
+
+</html>

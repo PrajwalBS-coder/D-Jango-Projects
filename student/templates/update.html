@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>UPDATE</h1>
+        <form  method="post">
+            {% csrf_token %}
+            <label for="sn">Students Name</label>
+            <select name="sn" id="sn">
+                {% for s in d %}
+                <option value="{{s.id}}">{{s.name}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="update">
+        </form>
+        <!-- action="/insert_form/" -->
+    </center>
+</body>
+</html>

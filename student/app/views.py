@@ -32,3 +32,24 @@ def insert_form(re):
             return render(re,'disp.html',{'d':student.objects.all()})
 
     return render(re,'insertform.html',{'d':obj})
+
+def delete_form(re):
+    obj=student.objects.all()
+    if re.method=='POST':
+        mobj=student.objects.none()#creatingh empty model queryset
+        stlst=re.POST.getlist('st')
+        for i in stlst:
+            mobj=mobj |student.objects.filter(id=i)
+        mobj.delete()
+        return render(re,'disp.html',{'d':student.objects.all()})
+    return render(re,'delete.html',{'d':obj})
+
+
+def update_form(re):
+    obj=student.objects.all()
+    if re.method=='POST':
+        sobj=school.objects.all()
+        obj=student.objects.get(id=re.POST['sn'])
+        return render(re,'edit.html',{'d':obj,'st':sobj})
+       
+    return render(re,'update.html',{'d':obj})

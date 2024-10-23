@@ -22,5 +22,7 @@ urlpatterns = [
     path('insert/',insert,name='insert'),
     path('update/',update,name='update'),
     path('delete/',delete,name='delete'),
-    path('insert_form/',insert_form,name='insert_form')
+    path('insert_form/',insert_form,name='insert_form'),
+    path('delete_form/',delete_form,name='delete_form'),
+    path('update_form/',update_form,name='update_form')
 ]
