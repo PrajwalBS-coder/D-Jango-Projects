@@ -20,6 +20,18 @@ def update(re):
 def delete(re):
     student.objects.filter(id=1).delete()
     return render(re,'disp.html',{'d':student.objects.all()})
+# def insert_form(re):
+#     obj=school.objects.all()
+#     if re.method =='POST':
+#         na=re.POST['na']
+#         ge=re.POST['ge']
+#         sc=re.POST['sc']
+#         so=school.objects.get(name=sc)
+#         stu=student.objects.get_or_create(name=na,gender=ge,school_name=so)
+#         if stu:
+#             return render(re,'disp.html',{'d':student.objects.all()})
+
+#     return render(re,'insertform.html',{'d':obj})
 def insert_form(re):
     obj=school.objects.all()
     if re.method =='POST':
@@ -27,10 +39,15 @@ def insert_form(re):
         ge=re.POST['ge']
         sc=re.POST['sc']
         so=school.objects.get(name=sc)
-        stu=student.objects.get_or_create(name=na,gender=ge,school_name=so)
-        if stu:
+        sid=student.objects.get(name=re.POST['na'])
+        if sid:
+            stu=student.objects.filter(id=sid.id)
+            if stu:
+                student.objects.filter(name=na).update(name=na,gender=ge,school_name=so)
+                return render(re,'disp.html',{'d':student.objects.all()})
+        else:
+            student.objects.get_or_create(name=na,gender=ge,school_name=so)
             return render(re,'disp.html',{'d':student.objects.all()})
-
     return render(re,'insertform.html',{'d':obj})
 
 def delete_form(re):
@@ -53,3 +70,5 @@ def update_form(re):
         return render(re,'edit.html',{'d':obj,'st':sobj})
        
     return render(re,'update.html',{'d':obj})
+def disp(re):
+    return render(re,'disp.html',{'d':student.objects.all()})

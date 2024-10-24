@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <center>
         <h1>STUDENT DETAILS</h1>
         <table border="3px">
-<tr>
-    <th>NMAE</th>
-    <th>GENDER</th>
-    <th>SCHOOL</th>
-</tr>
-{%for s in d %}
-<tr>
-<td>{{s.name}}</td>
-<td>{{s.gender}}</td>
-<td>{{s.school_name}}</td></tr>
-{% endfor %}
+            <tr>
+                <th>NMAE</th>
+                <th>GENDER</th>
+                <th>SCHOOL</th>
+            </tr>
+            {%for s in d %}
+            <tr>
+                <td>{{s.name}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.school_name}}</td>
+            </tr>
+            {% endfor %}
 
         </table>
+        <a href="/insert_form/"><button>Insert</button></a>&nbsp;&nbsp;&nbsp;
+        <a href="/delete_form/"> <button>Delete</button></a>&nbsp;&nbsp;&nbsp;
+        <a href="/update_form/"><button>Update</button></a>&nbsp;&nbsp;&nbsp;
     </center>
 </body>
+
 </html>
