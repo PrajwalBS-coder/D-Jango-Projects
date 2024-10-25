@@ -11,6 +11,8 @@
     <center>
         <form action="" method="post">
             {% csrf_token %}
+            <label for="un"></label>
+            <input type="hidden" name="un" id="un" value="" ><br>
             <label for="na">NAME</label>
             <input type="text" name="na" id="na" value=""><br>
             <label for="ge">GENDER</label>

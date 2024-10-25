@@ -35,15 +35,17 @@ def delete(re):
 def insert_form(re):
     obj=school.objects.all()
     if re.method =='POST':
+        id=re.POST['un']
         na=re.POST['na']
         ge=re.POST['ge']
         sc=re.POST['sc']
         so=school.objects.get(name=sc)
-        sid=student.objects.get(name=re.POST['na'])
-        if sid:
-            stu=student.objects.filter(id=sid.id)
-            if stu:
-                student.objects.filter(name=na).update(name=na,gender=ge,school_name=so)
+        if id:
+        # sid=student.objects.get(id=re.POST['un'])
+        # if sid:
+        #     stu=student.objects.filter(id=sid.id)
+            # if stu:
+                student.objects.filter(id=id).update(name=na,gender=ge,school_name=so)
                 return render(re,'disp.html',{'d':student.objects.all()})
         else:
             student.objects.get_or_create(name=na,gender=ge,school_name=so)

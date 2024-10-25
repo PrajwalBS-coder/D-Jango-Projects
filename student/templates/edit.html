@@ -11,6 +11,8 @@
     <center>
         <form action="/insert_form/" method="post">
             {% csrf_token %}
+            <label for="un">ID</label>
+            <input type="text" name="un" id="un" value="{{d.id}}" disabled><br>
 
             <label for="na">NAME</label>
             <input type="text" name="na" id="na" value="{{d.name}}"><br>
