@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin-top: 15px;
+            border-spacing: 10px;
+            border-radius: 13px;
+            padding: 15px;
+            background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+        }
+
+        th,
+        td {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            padding: 10px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            display: inline;
+            background-color: rgb(255, 255, 0);
+            color: navy;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Student Details</h1>
+        <table border="3px">
+            {% for cname in clm %}
+            <th>{{cname}}</th>
+
+            {% endfor %}
+            {% for stu in data %}
+
+
+            <tr>
+                <td>{{stu.id}}</td>
+                <td>{{stu.name}}</td>
+                <td>{{stu.sid}}</td>
+                <td>{{stu.email}}</td>
+                <td>{{stu.url}}</td>
+                <td>{{stu.address}}</td>
+                <td id="hidden-column">{{stu.password}}</td>
+
+            </tr>
+            {% endfor %}
+
+        </table>
+        <a href=" "><button>Need To Edit </button></a>
+
+    </center>
+    <script>
+        let val = document.getElementById('hidden-column').innerText
+        console.log(val)
+        document.getElementById('hidden-column').innerText ='*****'
+        document.getElementById('hidden-column').addEventListener(('click'), () => {
+
+            //document.getElementById('hidden-column').innerText = val;
+            if (document.getElementById('hidden-column').innerText==val){
+                document.getElementById('hidden-column').innerText ='*****'
+            }
+            else{
+                document.getElementById('hidden-column').innerText =val
+            }
+        })
+    </script>
+</body>
+
+</html>

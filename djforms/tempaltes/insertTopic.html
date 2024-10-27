@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,13 @@
         body {
             background-color: black;
         }
-        form{
+
+        form {
             display: inline;
             background-color: rgb(255, 255, 0);
             color: rgb(218, 214, 19);
         }
+
         h1 {
             display: inline;
             background-color: rgb(255, 255, 0);
@@ -20,15 +23,18 @@
         }
     </style>
 </head>
-<body >
-    <center>
-    <h1>Fill The Form⏳</h1>
-    <form action="" method="post">
-        {% csrf_token %}
 
-        {{form.as_p}}
-        <input type="submit" value="INsert">
-    </form>
-</center>
+<body>
+
+    <center>
+        <h1>Fill The Topic Form⏳</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+
+            {{form.as_p}}
+            <input type="submit" value="INsert">
+        </form>
+    </center>
 </body>
+
 </html>
