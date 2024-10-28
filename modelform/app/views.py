@@ -14,7 +14,7 @@ def InsertTopic(re):
             return hr('Gone')
 
 
-    return render(re,'inserttopic.html',{'form':TopicForm()})
+    return render(re,'insert.html',{'tform':TopicForm()})
 
 def InsertWebpage(re):
     if re.method=='POST':
@@ -26,7 +26,7 @@ def InsertWebpage(re):
             return hr('Gone')
 
 
-    return render(re,'insertwebpage.html',{'form':WebpageForm()})#insertacccess
+    return render(re,'insert.html',{'wform':WebpageForm()})#insertacccess
 
 def InsertAccess(re):
     if re.method=='POST':
@@ -38,4 +38,4 @@ def InsertAccess(re):
             return hr('Gone')
 
 
-    return render(re,'insertwebpage.html',{'form':AccessForm()})#insertacccess
+    return render(re,'insert.html',{'aform':AccessForm()})#insertacccess

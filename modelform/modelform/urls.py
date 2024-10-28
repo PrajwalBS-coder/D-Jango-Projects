@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('insertTopic/',InsertTopic,name='InsertTopic'),
     path('insertwebpage/',InsertWebpage,name='insertWebpage'),
-     path('insertaccess/',InsertAccess,name='InsertAccess'),
+    path('insertaccess/',InsertAccess,name='InsertAccess'),
 
 ]

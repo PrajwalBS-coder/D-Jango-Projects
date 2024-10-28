@@ -9,6 +9,7 @@ class TopicForm(forms.ModelForm):
 class WebpageForm(forms.ModelForm):
     class Meta:
         model=webpage
+        # fields=['topic_name','email']
         fields='__all__'
 
 class AccessForm(forms.ModelForm):
