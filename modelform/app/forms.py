@@ -6,11 +6,17 @@ class TopicForm(forms.ModelForm):
         model=topic
         fields='__all__'
 
+
 class WebpageForm(forms.ModelForm):
     class Meta:
         model=webpage
         # fields=['topic_name','email']
         fields='__all__'
+        widgets={'email':forms.PasswordInput}
+        help_texts={'topic_name':'It Is TOPIC','email':'EMAIL FIELD ACTS AS PASSWORD'}
+        labels={'topic_name':'It Is TOPIC','email':'EMAIL FIELD ACTS AS PASSWORD'}
+
+
 
 class AccessForm(forms.ModelForm):
     class Meta:

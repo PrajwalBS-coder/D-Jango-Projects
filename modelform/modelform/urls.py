@@ -22,5 +22,9 @@ urlpatterns = [
     path('insertTopic/',InsertTopic,name='InsertTopic'),
     path('insertwebpage/',InsertWebpage,name='insertWebpage'),
     path('insertaccess/',InsertAccess,name='InsertAccess'),
+    path('fun/<data>/',fun,name='fun'),
 
 ]
+admin.site.site_header='DJ-ANGO'
+admin.site.site_title='MY DJ-ANGO'
+admin.site.index_title='IT IS WHAT IT IS'

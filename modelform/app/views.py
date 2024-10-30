@@ -4,14 +4,14 @@ from django.http import HttpResponse as hr
 # Create your views here.
 
 
-def InsertTopic(re):
+def InsertTopic(re,data):
     if re.method=='POST':
         dataobj=TopicForm(re.POST)
         if dataobj.is_valid():
             dataobj.save()
             return hr("OK")
         else:
-            return hr('Gone')
+            return hr(f'Gone',{data})
 
 
     return render(re,'insert.html',{'tform':TopicForm()})
@@ -39,3 +39,5 @@ def InsertAccess(re):
 
 
     return render(re,'insert.html',{'aform':AccessForm()})#insertacccess
+def fun(re,data):
+    return hr(f'OK Hello!{data}')
