@@ -73,6 +73,4 @@ def Queries(re):
     # Product.objects.filter(manufacture=" ").delete()
     Product.objects.update_or_create(pname='Peter England',defaults={"price":8966,"mdate":'2022-08-05'})
     Product.objects.update_or_create(pname='Peter England',defaults={"price":8966,"mdate":'2022-08-05'})
-
-
     return render(re,'all.html',{'data':PCO,'columns':columns})

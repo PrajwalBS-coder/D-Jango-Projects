@@ -6,28 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {margin-top: 15px;
+        table {
+            margin-top: 15px;
 
             border-spacing: 10px;
             border-radius: 13px;
             padding: 15px;
-          
+
             background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
         }
-        th{
+
+        th {
             font-family: Arial, Helvetica, sans-serif;
             text-transform: uppercase;
             padding: 10px;
-            
+
         }
-        body{
+
+        body {
             background-color: black;
         }
-        h1{
+
+        h1 {
             display: inline;
-            
+
             background-color: rgb(255, 255, 0);
-            color: navy ;
+            color: navy;
         }
     </style>
 </head>
@@ -35,7 +39,7 @@
 <body bac>
     <center>
         <h1>Products Categories</h1>
-        <table border="3px">
+        <table border="3px black">
             <tr>
                 {% for col in columns %}
                 <th>{{col}}</th>
@@ -43,7 +47,7 @@
             </tr>
             {% for data in data %}
             <tr>
-                
+
                 <!-- <th>{{data.pcid}}</th>
                 <th>{{data.product_category_name}}</th>
                 <th>{{data.source}}</th> -->
@@ -53,7 +57,7 @@
                 <th>{{data.price}}</th>
                 <th>{{data.manufacture}}</th>
                 <th>{{data.mdate}}</th> -->
-               
+
                 {% for pdata in data.product_set.all %}
                 <th>{{pdata.pid}}</th>
                 <th>{{pdata.pcid}}</th>
@@ -65,11 +69,11 @@
                 <th>{{data.pcid}}</th>
                 <th>{{data.product_category_name}}</th>
                 <th>{{data.source}}</th>
-               
+
             </tr>
             {% endfor %}
             {% endfor %}
-            
+
         </table>
     </center>
 </body>
