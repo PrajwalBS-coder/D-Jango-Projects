@@ -30,3 +30,10 @@ class access(models.Model):
     date=models.DateField()
     def __str__(self):
         return self.author
+    
+class stud(models.Model):
+    id=models.IntegerField(primary_key=True)
+    name=models.CharField(max_length=100)
+    email=models.EmailField()
+    def __str__(self):
+        return self.name

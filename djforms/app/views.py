@@ -57,3 +57,19 @@ def insertaccess(request):
             else:
                 return hr('NOIDEA')
     return render(request,'insertwebpage.html',{'form':AccessForm()})
+
+
+def insertstu(request):
+    if(request.method=='POST'):
+        data=student(request.POST)
+        if data.is_valid():
+            so=stud.objects.get_or_create(id=request.POST['id'],name=request.POST['name'],email=request.POST['email'])
+            if so:
+                return hr("DONE")
+            else:
+                return hr('NOIDEA')
+        else:
+            hr('GONE')
+
+
+    return render(request,'insertTopic.html',{'form':student()})
