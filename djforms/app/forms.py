@@ -38,8 +38,13 @@ class student(forms.Form):
     name=forms.CharField(validators=[Validate_Name])
     email=forms.EmailField()
     reemail=forms.EmailField()
+    botcacher=forms.CharField(required=False,widget=forms.HiddenInput)
     def clean(data):
         e=data.cleaned_data['email']
         r=data.cleaned_data['reemail']
-        if e==r:
+        if e!=r:
             raise forms.ValidationError("Error")
+    def clean_botcacher(data):
+        bot=data.cleaned_data['botcacher']
+        if bot:
+            raise forms.ValidationError("Eror")
