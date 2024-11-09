@@ -14,3 +14,5 @@ def InsertStudent(re):
             hr('Error')
     return render(re,'form.html',{'form':StudentForm()})
 
+def filter(re):
+    return render(re,'filter.html',{'data':"AminA Is Legend",'i':3})
