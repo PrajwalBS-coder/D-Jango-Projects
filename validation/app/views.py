@@ -15,4 +15,4 @@ def InsertStudent(re):
     return render(re,'form.html',{'form':StudentForm()})
 
 def filter(re):
-    return render(re,'filter.html',{'data':"AminA Is Legend",'i':3})
+    return render(re,'filter.html',{'data':"AminA Is Legend"})

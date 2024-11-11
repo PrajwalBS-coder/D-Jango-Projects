@@ -12,10 +12,14 @@
     <center>
         <h1>
             {{data}}<br>
-            {{data|Swapping}}<br>
+            {{data | Swapping}}<br>
             {{data | length}}<br>
-            {{data |rev}}<br>{{i}}
-            {{ data|ind:'A 1 5'}}<br>
+            {{data | rev}}<br><br>
+            {% my_tag "Hello" 1 5 %}<br>
+            {{ data|my_filter:"A,1,5" }}<br>
+            {{data |find:'c'}}
+
+
         </h1>
     </center>
 </body>
