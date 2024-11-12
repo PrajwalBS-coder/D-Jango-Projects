@@ -1,5 +1,5 @@
 """
-URL configuration for regform project.
+URL configuration for allinoneform project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,12 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf import settings 
-from django.conf.urls.static import static
 from app.views import *
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('registration/',Registration,name='Registration'),
-]+static(settings.MEDIA_URL,docment_root=settings.MEDIA_ROOT)
+    path('Insertall',Insertall,name='Insertall'),
+]
