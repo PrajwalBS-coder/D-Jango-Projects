@@ -24,4 +24,4 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/',Registration,name='Registration'),
-]+static(settings.MEDIA_URL,docment_root=settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)#document 
