@@ -1,4 +1,4 @@
-<!-- {%load crispy_forms_tags %}  -->
+{%load crispy_forms_tags %} 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +13,7 @@
 <body>
     <form action="" method="post">
         {% csrf_token %}
+        {{form|crispy}}
         {% if not form.instance.id%}
       {% include 'save.html' %}
       {% endif %}
