@@ -135,8 +135,8 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
 
 #EMAIl SENGING
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='legendamin007@gmail.com'
-EMAIL_HOST_PASSWORD='dhtpktmmfrusrpct'
+EMAIL_HOST_USER='your@gmail.com'
+EMAIL_HOST_PASSWORD='your app password'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_PORT=587

@@ -23,7 +23,7 @@ def Registration(re):
             send_mail(
                 "Registration",
                 "SuccessFull😎✌",
-                'legendamin007@gmail.com',
+                'your@gmail.com',
                 [MUO.email],
                 fail_silently=False)
             return hr('Done')
