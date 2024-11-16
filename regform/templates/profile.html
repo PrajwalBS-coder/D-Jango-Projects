@@ -13,11 +13,13 @@
 
 <body>
     {% block empty %}
-    {% if name %}
-    <h1>Welcome Home {{name}}</h1>
-    {% else %}
-    <h1>Welcome Home </h1>
-    {% endif %}
+  <h1>
+    User Name Is {{profile.user_name}}
+  </h1>
+  <h2>Address {{profile.address}}</h2>
+
+  <h3>Profile Pic</h3>
+  <img src="{{profile.profile_pic.url}}" alt="" srcset="">
     {% endblock%}
 
 </body>

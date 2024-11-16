@@ -1,0 +1,96 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Home Page</title>
+
+    {% endblock %}
+</head>
+
+<body>
+    {% block empty %}
+  <h1>Login Page Code Explanination
+  </h1>
+  <p>This code defines a function `UserLogin(re)` that handles user login functionality for a web application, likely built using Django. It processes login requests and manages user authentication. Here's a detailed breakdown of the code:
+
+    ### Function Signature
+    
+    ```python
+    def UserLogin(re):
+    ```
+    - `UserLogin(re)` is a view function that takes an HTTP request object (`re`) as a parameter. In Django, a view function receives an HTTP request and returns an HTTP response. The request object contains information about the user's request, such as the method (GET or POST), form data, and session data.
+    
+    ### Handling POST Request (Login Attempt)
+    
+    ```python
+    if re.method == 'POST':
+    ```
+    - This condition checks if the HTTP method used for the request is POST. A POST request typically occurs when a user submits a form. In this case, the form is expected to be a login form.
+    
+    ```python
+    na = re.POST['usn']
+    paswd = re.POST['passwdw']
+    ```
+    - The two lines above extract the values from the POST data (form fields). The username is retrieved from `re.POST['usn']` and the password from `re.POST['passwdw']`.
+    
+    ### Authentication
+    
+    ```python
+    AUO = authenticate(username=na, password=paswd)
+    ```
+    - The `authenticate` function is called with the username (`na`) and password (`paswd`) as parameters. This function checks whether the provided credentials are valid. If authentication is successful, it returns a user object (`AUO`). If authentication fails, it returns `None`.
+    
+    ### Handling Successful Authentication
+    
+    ```python
+    if AUO:
+        if AUO.is_active:
+            login(re, AUO)
+            re.session['username'] = na
+            return HttpResponseRedirect(reverse('home'))
+    ```
+    - If the `AUO` (user object) is not `None`, it means the authentication was successful.
+    - The next check ensures that the user account is active (`AUO.is_active`). If the account is inactive, the login will not proceed.
+    - If the account is active, the user is logged in using `login(re, AUO)`. This sets up the user session for the authenticated user.
+    - The session variable `re.session['username']` is set to the username, presumably for later use (e.g., to display the username in the UI).
+    - After logging in the user, the function redirects to the `home` page (using `HttpResponseRedirect(reverse('home'))`). `reverse('home')` generates the URL for the `home` view based on its URL pattern name, and the redirection occurs to the home page.
+    
+    ### Handling Inactive User or Invalid Credentials
+    
+    ```python
+    else:
+        hr('Not An Active User')
+    ```
+    - If the user object (`AUO`) exists but `AUO.is_active` is `False` (the user account is not active), the function calls `hr('Not An Active User')`. 
+      - Presumably, `hr` is a helper function that handles this message. It may show an error message to the user indicating that their account is not active, although the exact behavior is not clear from the code provided.
+    
+    ```python
+    else:
+        hr('Invalid Data')
+    ```
+    - If the authentication fails (i.e., `AUO` is `None`), this code calls `hr('Invalid Data')`. Again, `hr` likely handles error messages (probably displaying a message like "Invalid username or password").
+    
+    ### Handling GET Request (Rendering Login Page)
+    
+    ```python
+    return render(re, 'userlogin.html')
+    ```
+    - If the request method is not POST (i.e., the user is accessing the page for the first time or the request method is GET), the function renders the login page (`userlogin.html`). This allows the user to input their credentials.
+    
+    ### Summary
+    
+    The `UserLogin` function handles both POST and GET requests for user login:
+    
+    - **POST request**: It processes the login form submission, authenticates the user, and logs them in if their credentials are correct and their account is active. If the user is inactive or the credentials are invalid, an error message is displayed.
+    - **GET request**: It simply renders the login page, allowing the user to enter their credentials.
+    
+    This view is typically part of a Django-based web application where users can log in using a form.</p>
+    {% endblock%}
+
+</body>
+
+</html>

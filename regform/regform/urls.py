@@ -23,8 +23,13 @@ from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('start/',Start,name='start'),
     path('registration/',Registration,name='Registration'),
     path('home/',HomePage,name='home'),
     path('login/',UserLogin,name='login'),
-    path('logout/',UserLogout,name='logout')
+    path('logout/',UserLogout,name='logout'),
+    path('aboutus/',About,name='aboutus'),
+    path('profile/',UserProfile,name='profile'),
+    path('changepassword',ChangePassword,name='changepassword'),
+    path('resetpassword/',ResetPassword,name='resetpassword')
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)#document 

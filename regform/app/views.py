@@ -70,3 +70,41 @@ def UserLogin(re):
 def UserLogout(re):
     logout(re)
     return HttpResponseRedirect(reverse('home'))
+
+
+def Start(re):
+    return render(re,'main.html')
+
+def About(re):
+    return render(re,'aboutus.html')
+
+@login_required
+def UserProfile(re):
+    name=re.session.get('username')
+    UO=User.objects.get(username=name)
+    PO=Profile.objects.get(user_name=UO)
+    return render(re,'profile.html',{'user':UO,'profile':PO})
+
+
+@login_required
+def ChangePassword(re):
+    if re.method=='POST':
+        name=re.session.get('username')
+        pw=re.POST['pwd']
+        UO=User.objects.get(username=name)
+        UO.set_password(pw)
+        UO.save()
+        
+
+    return render(re,'change_password.html')
+
+
+def ResetPassword(re):
+    if re.method=='POST':
+        name=re.POST['usn']
+        pw=re.POST['pwd']
+        UO=User.objects.filter(username=name)
+        if UO:
+            UO[0].set_password(pw)
+            UO[0].save()
+    return render(re,'resetpassword.html')

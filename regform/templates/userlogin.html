@@ -15,12 +15,12 @@
     {% block empty %}
     <form action="" method="post">
         {% csrf_token %}
-        <label for="usn">Enter User Name</label>
-        <input type="text" name="usn" id="usn">
-        <label for="passwdw">Enter Password</label>
-        <input type="password" name="passwdw" id="passwdw">
+        <label for="usn" class="form-label">Enter User Name</label>
+        <input type="text" name="usn" id="usn" class="form-control"><br>
+        <label for="passwdw" class="form-label">Enter Password</label>
+        <input type="password" name="passwdw" id="passwdw" class="form-control"><br>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class="btn btn-primary">
     </form>
 
 
