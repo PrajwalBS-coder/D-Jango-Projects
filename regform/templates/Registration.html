@@ -1,21 +1,30 @@
+{% extends 'main.html' %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <center>
+        {% block empty %}
+
+
+
         <h1>Registrations</h1>
         <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %} 
-            
+            {% csrf_token %}
+
             {{uform.as_p}}
             {{pform.as_p}}
 
             <input type="submit" value="Registration">
         </form>
+        {% endblock%}
     </center>
 </body>
+
 </html>
