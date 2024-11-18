@@ -63,7 +63,7 @@ def UserLogin(re):
             hr('Invalid Data')
 
 
-    return render(re,'userlogin.html')
+    return render(re,'userlogin2.html')
 
 
 @login_required
@@ -108,3 +108,22 @@ def ResetPassword(re):
             UO[0].set_password(pw)
             UO[0].save()
     return render(re,'resetpassword.html')
+
+
+def Edit(re):
+    if re.method=='POST':
+        name=re.session.get('username')
+        UO=User.objects.get(username=name)
+        PO=Profile.objects.get(user_name=UO)
+
+        UO.username=re.POST['usn']
+        PO.address=re.POST['address']
+        UO.email=re.POST['email']
+        UO.save()
+        PO.save()
+        logout(re)
+        return HttpResponseRedirect(reverse('login'))
+    name=re.session.get('username')
+    UO=User.objects.get(username=name)
+    PO=Profile.objects.get(user_name=UO)
+    return render(re,'edit.html',{'user':UO,'profile':PO})

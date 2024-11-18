@@ -13,13 +13,16 @@
 
 <body>
     {% block empty %}
+    <h3>Profile Pic</h3>
+    <img src="{{profile.profile_pic.url}}" alt="" srcset="" height="100px" width="100px">
   <h1>
+
     User Name Is {{profile.user_name}}
   </h1>
   <h2>Address {{profile.address}}</h2>
-
-  <h3>Profile Pic</h3>
-  <img src="{{profile.profile_pic.url}}" alt="" srcset="">
+  <h2>Address {{user.email}}</h2>
+  
+  <a href="{% url 'edit' %}" >Edit</a>
     {% endblock%}
 
 </body>
