@@ -118,7 +118,9 @@ def Edit(re):
 
         UO.username=re.POST['usn']
         PO.address=re.POST['address']
+        PO.profile_pic=re.FILES['img']
         UO.email=re.POST['email']
+        
         UO.save()
         PO.save()
         logout(re)

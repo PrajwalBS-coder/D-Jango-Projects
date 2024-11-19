@@ -140,3 +140,9 @@ EMAIL_HOST_PASSWORD='your app password'
 EMAIL_USE_TLS=True
 EMAIL_USE_SSL=False
 EMAIL_PORT=587
+
+
+#Static Files
+
+STATIC_DIR=os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS=[STATIC_DIR]

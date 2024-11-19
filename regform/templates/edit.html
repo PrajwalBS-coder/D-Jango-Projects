@@ -1,4 +1,6 @@
 {% extends 'main.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,15 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}
     <title>Home Page</title>
-
+<link rel="stylesheet" href="{% static 'css/st.css' %}">
     {% endblock %}
+    
 </head>
 
 <body>
     {% block empty %}
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        <label for="">Profile Picture</label>
+        <img src="{{profile.profile_pic.url}}" alt="Current image" id="outputimg">
+        <!-- <input type="image" src="{{profile.profile_pic.url}}" alt="not found" height="100px" width="100px" id="outputimg"><br> -->
+        <input type="file" name="img" id="img" accept="image/*"><br>
         <label for="usn" class="form-label">User Name</label>
         <input type="text" name="usn" id="usn" class="form-control" value="{{profile.user_name}}"><br>
         <label for="usn" class="form-label">User Address</label>
@@ -23,10 +30,14 @@
         <label for="usn" class="form-label">User Email</label>
         <input type="email" name="email" id="email" class="form-control" value="{{user.email}}"><br>
 
-        <input type="submit" value="Login" class="btn btn-primary">
+        <input type="submit" value="Update" class="btn btn-primary">
     </form>
+    <script src="{% static 'js/img.js' %}" ></script>
 
     {% endblock%}
+
+
+
 </body>
 
 </html>
