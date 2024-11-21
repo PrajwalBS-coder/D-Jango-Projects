@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('fun/',Fun,name='Fun'),
     path('fun2/',Fun2.as_view(),name='fun2'),
-    path('Form/',Form.as_view(),name='Form')
+    path('Form/',Form.as_view(),name='Form'),
+    path('RenderHtml/',RenderHtml.as_view(),name='RenderHtml'),
+    path('StudentInsert/',StudentInsert.as_view(),name='StudentInsert')
 ]

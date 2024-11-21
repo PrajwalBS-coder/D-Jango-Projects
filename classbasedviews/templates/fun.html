@@ -8,6 +8,13 @@
 <body>
     <center>
         <h1>Function Based</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+
+            {{form.as_p}}
+        <input type="submit" value="INsert">
+        </form>
+        
     </center>
 </body>
 </html>
