@@ -23,5 +23,6 @@ urlpatterns = [
     path('fun2/',Fun2.as_view(),name='fun2'),
     path('Form/',Form.as_view(),name='Form'),
     path('RenderHtml/',RenderHtml.as_view(),name='RenderHtml'),
-    path('StudentInsert/',StudentInsert.as_view(),name='StudentInsert')
+    path('StudentInsert/',StudentInsert.as_view(),name='StudentInsert'),
+    path('StudentINsert2/',StudentINsert2.as_view(),name='StudentINsert2')
 ]

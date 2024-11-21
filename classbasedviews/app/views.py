@@ -49,3 +49,14 @@ class StudentInsert(TemplateView):
             return HttpResponse("OK")
         else:
            return HttpResponse('NOT OK')
+
+
+#FormView
+
+class StudentINsert2(FormView):
+    form_class=Sform
+    template_name='fun.html'
+
+    def form_valid(self, form):
+        form.save()
+        return HttpResponse("Done")
