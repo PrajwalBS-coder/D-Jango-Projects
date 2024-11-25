@@ -11,5 +11,10 @@ class SchholList(ListView):
 class StudentList(ListView):
     model=Student
     context_object_name='stu'
+
+class SchoolDetails(DetailView):
+    model=Ischool
+    # template_name="detailed.html"
+
     
     
