@@ -8,10 +8,16 @@
 </head>
 
 <body>
-    <center>
-        {% for i in objects_list %}
-        <a href="{{i.pk}}">{{i.name}}</a><br>
-        {% endfor %}
+    <center><h1>DetailView
+        
+    </h1>
+        
+        {{scobject.name}}<br>
+        {{scobject.age}}<br>
+        {{scobject.Address}}
+<br>
+        <a href="{% url 'studentupdate' pk=object.pk %}">Update</a>
+
     </center>
 </body>
 
