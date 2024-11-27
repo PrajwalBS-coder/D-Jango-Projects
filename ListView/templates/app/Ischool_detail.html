@@ -7,6 +7,9 @@
 </head>
 <body>
     <center>
+        <h1>
+           Detail View
+        </h1>
         <h1>{{object.id}}</h1>
         <h1>{{object.sname}}</h1>
         <h1>{{object.address}}</h1>
@@ -17,6 +20,8 @@
         {{student.school}}<br>
         {% endfor %}
 
+        <!-- <a href="{% url 'updateSchool' pk=object.pk %}">Update</a> -->
+        <a href="{% url 'updateSchool' pk=object.pk %}" class="btn btn-danger">Update School</a>
     </center>
 </body>
 </html>

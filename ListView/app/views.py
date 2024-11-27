@@ -16,5 +16,11 @@ class SchoolDetails(DetailView):
     model=Ischool
     # template_name="detailed.html"
 
-    
-    
+class CreateSchool(CreateView):
+    model=Ischool
+    fields='__all__'
+
+class UpdateSchool(UpdateView):
+    model=Ischool
+    fields='__all__'
+ 

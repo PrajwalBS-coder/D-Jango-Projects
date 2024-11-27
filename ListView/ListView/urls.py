@@ -22,7 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('school/',SchholList.as_view(),name='school'),
     path('stu/',StudentList.as_view(),name='stu'),
+    path('CreateSchool/',CreateSchool.as_view(),name='CreateSchool'),
     # path('school/<pk>/',SchoolDetails.as_view(),name='details'),
     re_path('(?P<pk>\d+)/',SchoolDetails.as_view(),name='details'),
+    re_path('^update/(?P<pk>\d+)/',UpdateSchool.as_view(),name='updateSchool'),
 
 ]
