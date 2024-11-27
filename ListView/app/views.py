@@ -23,4 +23,8 @@ class CreateSchool(CreateView):
 class UpdateSchool(UpdateView):
     model=Ischool
     fields='__all__'
+
+class DeletVSchool(DeleteView):
+    model=Ischool
+    # context_object_nam='schoolobj'
  

@@ -28,6 +28,7 @@ urlpatterns = [
     
     # re_path('(?P<pk>\d+)/update$/',UpdateSchool.as_view(),name='updateSchool'),
     re_path(r'^(?P<pk>\d+)/update/$', UpdateSchool.as_view(), name='updateSchool'),#updateview should come first before detail view while using re_path()
+    re_path(r'^(?P<pk>\d+)/delete/$', DeletVSchool.as_view(), name='deleteSchool'),
     re_path('(?P<pk>\d+)/',SchoolDetails.as_view(),name='details'),
 
 ]
